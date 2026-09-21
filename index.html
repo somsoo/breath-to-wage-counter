@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>초단위 숨쉬기 정산소 - 실시간 월급루팡 계측기</title>
+  <meta name="description" content="내가 숨만 쉬며 축내고 있는 회사의 비용을 0.01원 단위로 실시간 계산하는 초경량 정산 토이. 15초 이상 체류 시 정식 감열식 영수증 직인 발급">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+  <style>
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .manual-ad-box { width: 100%; max-width: 960px; overflow: hidden; }
+    .manual-ad-box ins { max-width: 100% !important; overflow: hidden !important; }
+    @keyframes pulse-glow { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.85; transform: scale(1.02); } }
+    .neon-pulse { animation: pulse-glow 2s infinite ease-in-out; }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between">
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="text-xl">🫁</span>
+        <h1 class="text-sm font-bold tracking-tight text-emerald-400">초단위 숨쉬기 정산소 (Breath-to-Wage)</h1>
+      </div>
+      <a href="guides/guide.html" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg border border-slate-700 transition">
+        가이드
+      </a>
+    </div>
+  </header>
+
+  <div class="manual-ad-box mx-auto my-1 px-4">
+    <ins class="adsbygoogle"
+         style="display:block; height: 60px; max-height: 60px;"
+         data-ad-client="ca-pub-2228289204702106"
+         data-ad-slot="3824727725"
+         data-ad-format="horizontal"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <!-- Main Viewport: Single Focused Card (Type B) -->
+  <main class="max-w-xl mx-auto px-4 py-4 w-full flex-grow flex flex-col justify-center">
+    <div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl text-center relative overflow-hidden">
+      
+      <!-- Live Counter Display -->
+      <div class="my-6">
+        <p class="text-xs font-semibold text-slate-400 tracking-wider uppercase mb-1">CURRENT RECOVERED WAGE</p>
+        <div class="text-5xl font-black font-mono tracking-tight text-emerald-400 neon-pulse" id="wage-counter">
+          0.00<span class="text-2xl text-emerald-600">원</span>
+        </div>
+        <p class="text-xs text-slate-500 mt-2 font-mono" id="time-ticker">체류 시간: 00:00</p>
+      </div>
+
+      <!-- Snack Milestone Badge (15s Lock-in) -->
+      <div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-3 my-4">
+        <div class="flex justify-between text-xs text-slate-400 mb-1.5">
+          <span id="milestone-label">🔒 최소 15초 유지 시 정식 직인 발급</span>
+          <span id="milestone-progress" class="font-mono text-emerald-400">0 / 15s</span>
+        </div>
+        <div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
+          <div id="progress-bar" class="bg-emerald-500 h-full w-0 transition-all duration-300"></div>
+        </div>
+        <p class="text-xs text-slate-400 mt-2 font-medium" id="snack-status">현재 등가 보상: 숨쉬기 대기 중</p>
+      </div>
+
+      <!-- Salary Slider -->
+      <div class="my-5 text-left bg-slate-950/40 p-3.5 rounded-2xl border border-slate-800/60">
+        <div class="flex justify-between items-center mb-1.5">
+          <label class="text-xs font-bold text-slate-300" for="salary-slider">내 월 세전 급여 설정</label>
+          <span class="text-xs font-mono font-bold text-emerald-400" id="salary-val-text">350만 원</span>
+        </div>
+        <input type="range" id="salary-slider" min="200" max="600" step="50" value="350" class="w-full accent-emerald-500 cursor-pointer">
+      </div>
+
+      <!-- Main Action Buttons -->
+      <div class="flex gap-3 mt-4">
+        <button id="toggle-btn" class="flex-1 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-4 px-6 rounded-2xl text-base shadow-lg shadow-emerald-500/20 transition duration-150 flex items-center justify-center gap-2">
+          <span>🚀</span> <span id="toggle-text">루팡 개시 (Start)</span>
+        </button>
+        <button id="reset-btn" class="px-4 py-4 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold rounded-2xl text-sm transition">
+          초기화
+        </button>
+      </div>
+
+      <!-- Receipt Result Modal / Box (Hidden until finish) -->
+      <div id="receipt-card" class="mt-6 bg-white text-slate-900 rounded-2xl p-5 text-left border-4 border-slate-200 hidden font-mono shadow-2xl relative">
+        <div class="text-center border-b-2 border-dashed border-slate-300 pb-3 mb-3">
+          <p class="text-xs font-bold tracking-widest text-slate-500">OFFICIAL SLACKER RECEIPT</p>
+          <h2 class="text-lg font-black text-slate-900 mt-0.5">합법적 루팡 정산 영수증</h2>
+          <p class="text-xs text-slate-400" id="receipt-date"></p>
+        </div>
+
+        <div class="space-y-1.5 text-xs text-slate-700">
+          <div class="flex justify-between"><span>총 체류 시간:</span><span id="r-time" class="font-bold">0분 0초</span></div>
+          <div class="flex justify-between"><span>사측 회수 세후 소득:</span><span id="r-wage" class="font-bold text-emerald-600">0.00원</span></div>
+          <div class="flex justify-between"><span>현물 등가 교환:</span><span id="r-snack" class="font-bold">믹스커피 0잔</span></div>
+          <div class="flex justify-between pt-1 border-t border-slate-200">
+            <span>오늘의 루팡 직급:</span>
+            <span id="r-rank" class="font-black text-indigo-600">[3급: 화장실 은둔형 책략가]</span>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t-2 border-dashed border-slate-300 flex flex-col gap-2">
+          <button id="copy-btn" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition">
+            <span>📋</span> 단톡방 공유용 텍스트 복사
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- FAQ Accordion -->
+    <section class="mt-6 bg-slate-900 border border-slate-800 rounded-2xl p-5 text-xs text-slate-400">
+      <h3 class="font-bold text-slate-300 text-sm mb-2">초단위 숨쉬기 정산소 원리 FAQ</h3>
+      <details class="group cursor-pointer">
+        <summary class="font-semibold text-slate-300 list-none flex justify-between py-1">
+          <span>Q. 초당 급여는 어떤 기준으로 계산되나요?</span>
+          <span class="text-slate-500 group-open:rotate-180 transition">▼</span>
+        </summary>
+        <p class="mt-1.5 text-slate-400 leading-relaxed">
+          주 40시간(월 209시간 법정 근로시간) 기준으로 월 급여를 초단위로 분할하여 실시간(1초 = 월급 / 209 / 3600) 산출합니다.
+        </p>
+      </details>
+    </section>
+  </main>
+
+  <div class="manual-ad-box mx-auto my-2 px-4">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2228289204702106"
+         data-ad-slot="3416334507"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+  </div>
+
+  <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-slate-900 font-bold text-xs px-5 py-2.5 rounded-full shadow-2xl transition-opacity duration-300 opacity-0 pointer-events-none z-50">
+    단톡방 공유 카피가 복사되었습니다!
+  </div>
+
+  <footer class="border-t border-slate-900 py-4 text-center text-xs text-slate-600">
+    © 2026 Breath-to-Wage. All rights reserved.
+  </footer>
+
+  <script>
+    let isRunning = false;
+    let startTime = 0;
+    let timerId = null;
+    let audioCtx = null;
+
+    // Web Audio Cash Register Sound ("Cha-ching!")
+    function playCashSound() {
+      try {
+        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+        const now = audioCtx.currentTime;
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'triangle';
+        osc.frequency.setValueAtTime(987.77, now); // B5
+        osc.frequency.exponentialRampToValueAtTime(1318.51, now + 0.1); // E6
+        gain.gain.setValueAtTime(0.3, now);
+        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start(now);
+        osc.stop(now + 0.35);
+      } catch (e) {}
+    }
+
+    // Slider
+    const slider = document.getElementById('salary-slider');
+    const salaryValText = document.getElementById('salary-val-text');
+    slider.addEventListener('input', (e) => {
+      salaryValText.textContent = `${e.target.value}만 원`;
+    });
+
+    function triggerVibe(pattern) {
+      try {
+        if (navigator.vibrate) navigator.vibrate(pattern);
+      } catch (e) {}
+    }
+
+    const toggleBtn = document.getElementById('toggle-btn');
+    const toggleText = document.getElementById('toggle-text');
+    const counterEl = document.getElementById('wage-counter');
+    const timeEl = document.getElementById('time-ticker');
+    const progressBar = document.getElementById('progress-bar');
+    const progressLabel = document.getElementById('milestone-progress');
+    const snackStatus = document.getElementById('snack-status');
+    const receiptCard = document.getElementById('receipt-card');
+
+    let milestoneHit = { 5: false, 10: false, 15: false };
+
+    function update() {
+      const elapsedSec = (Date.now() - startTime) / 1000;
+      const salaryMan = parseInt(slider.value, 10) * 10000;
+      // Per sec: salary / 209 hours / 3600 sec
+      const perSec = salaryMan / 209 / 3600;
+      const accumulated = elapsedSec * perSec;
+
+      counterEl.innerHTML = `${accumulated.toFixed(2)}<span class="text-2xl text-emerald-600">원</span>`;
+      
+      const mm = String(Math.floor(elapsedSec / 60)).padStart(2, '0');
+      const ss = String(Math.floor(elapsedSec % 60)).padStart(2, '0');
+      timeEl.textContent = `체류 시간: ${mm}:${ss}`;
+
+      // Progress to 15s lock-in
+      const progress = Math.min(100, (elapsedSec / 15) * 100);
+      progressBar.style.width = `${progress}%`;
+      progressLabel.textContent = `${Math.min(15, Math.floor(elapsedSec))} / 15s`;
+
+      if (elapsedSec >= 5 && !milestoneHit[5]) {
+        milestoneHit[5] = true;
+        snackStatus.textContent = '달성: ☕ 자판기 율무차 1잔 획득!';
+        triggerVibe(15);
+      }
+      if (elapsedSec >= 10 && !milestoneHit[10]) {
+        milestoneHit[10] = true;
+        snackStatus.textContent = '달성: 🍭 막대사탕 1개 획득!';
+        triggerVibe(20);
+      }
+      if (elapsedSec >= 15 && !milestoneHit[15]) {
+        milestoneHit[15] = true;
+        snackStatus.textContent = '🎉 15초 완주! 정식 감열식 영수증 직인 해금';
+        triggerVibe([30, 50, 30]);
+      }
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      if (!isRunning) {
+        // Start
+        isRunning = true;
+        startTime = Date.now();
+        milestoneHit = { 5: false, 10: false, 15: false };
+        receiptCard.classList.add('hidden');
+        toggleText.textContent = '정산 종료 (Receipt)';
+        toggleBtn.classList.replace('bg-emerald-500', 'bg-rose-500');
+        toggleBtn.classList.replace('hover:bg-emerald-400', 'hover:bg-rose-400');
+        playCashSound();
+        triggerVibe(25);
+        timerId = setInterval(update, 50);
+      } else {
+        // Stop
+        isRunning = false;
+        clearInterval(timerId);
+        toggleText.textContent = '다시 개시 (Restart)';
+        toggleBtn.classList.replace('bg-rose-500', 'bg-emerald-500');
+        toggleBtn.classList.replace('hover:bg-rose-400', 'hover:bg-emerald-400');
+
+        const elapsedSec = (Date.now() - startTime) / 1000;
+        const salaryMan = parseInt(slider.value, 10) * 10000;
+        const perSec = salaryMan / 209 / 3600;
+        const finalWage = elapsedSec * perSec;
+
+        // Render receipt
+        document.getElementById('receipt-date').textContent = new Date().toLocaleString('ko-KR');
+        document.getElementById('r-time').textContent = `${Math.floor(elapsedSec / 60)}분 ${Math.floor(elapsedSec % 60)}초`;
+        document.getElementById('r-wage').textContent = `${finalWage.toFixed(2)}원`;
+        
+        const coffeeCups = (finalWage / 2000).toFixed(1);
+        document.getElementById('r-snack').textContent = `메가커피 아메리카노 약 ${coffeeCups}잔 분량`;
+        
+        receiptCard.classList.remove('hidden');
+        playCashSound();
+      }
+    });
+
+    document.getElementById('reset-btn').addEventListener('click', () => {
+      isRunning = false;
+      clearInterval(timerId);
+      counterEl.innerHTML = '0.00<span class="text-2xl text-emerald-600">원</span>';
+      timeEl.textContent = '체류 시간: 00:00';
+      progressBar.style.width = '0%';
+      progressLabel.textContent = '0 / 15s';
+      snackStatus.textContent = '현재 등가 보상: 숨쉬기 대기 중';
+      toggleText.textContent = '루팡 개시 (Start)';
+      toggleBtn.classList.replace('bg-rose-500', 'bg-emerald-500');
+      receiptCard.classList.add('hidden');
+    });
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.textContent = msg;
+      toast.style.opacity = '1';
+      setTimeout(() => { toast.style.opacity = '0'; }, 2200);
+    }
+
+    document.getElementById('copy-btn').addEventListener('click', () => {
+      const wage = document.getElementById('r-wage').textContent;
+      const time = document.getElementById('r-time').textContent;
+      const url = window.location.href;
+      const copyText = `오늘 변기 위에서 ${wage} 벌었습니다 (${time} 체류).\n팀장님, 제가 가만히 앉아 숨만 쉬어도 회사는 돈을 냅니다.\n👉 실시간 월급루팡 계산기: ${url}`;
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(copyText).then(() => showToast('단톡방 카피가 복사되었습니다!'));
+      } else {
+        const ta = document.createElement('textarea');
+        ta.value = copyText;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast('단톡방 카피가 복사되었습니다!');
+      }
+    });
+  </script>
+</body>
+</html>
