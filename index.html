@@ -444,7 +444,7 @@
       const perSec = salaryMan / 209 / 3600;
       const accumulated = elapsedSec * perSec;
 
-      counterEl.innerHTML = `${accumulated.toFixed(2)}<span class="text-2xl text-emerald-600">원</span>`;
+      counterEl.innerHTML=`${accumulated.toFixed(2)}<span class="text-2xl text-emerald-600">원</span>`;
       
       const mm = String(Math.floor(elapsedSec / 60)).padStart(2, '0');
       const ss = String(Math.floor(elapsedSec % 60)).padStart(2, '0');
@@ -514,7 +514,7 @@
     document.getElementById('reset-btn').addEventListener('click', () => {
       isRunning = false;
       clearInterval(timerId);
-      counterEl.innerHTML = '0.00<span class="text-2xl text-emerald-600">원</span>';
+      counterEl.innerHTML='0.00<span class="text-2xl text-emerald-600">원</span>';
       timeEl.textContent = '체류 시간: 00:00';
       progressBar.style.width = '0%';
       progressLabel.textContent = '0 / 15s';
