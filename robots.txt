@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://breath-to-wage-counter.enjoy-onepage.com/sitemap.xml
