@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급</title>
+  <link>https://breath-to-wage-counter.enjoy-onepage.com/</link>
+  <description>연봉 기반 실시간 초당 급여 환산: 숨 한 번 쉴 때마다(4초 주기) 통장에 쌓이는 화폐 가치를 시각화하여 직장인 번아웃을 극복하는 인지 힐링 도구입니다.</description>
+  <language>ko-kr</language>
+  <atom:link href="https://breath-to-wage-counter.enjoy-onepage.com/rss.xml" rel="self" type="application/rss+xml" />
+  <lastBuildDate>Tue, 29 Sep 2026 06:00:50 +0000</lastBuildDate>
+  <item>
+    <title>이용약관 - 호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급</title>
+    <link>https://breath-to-wage-counter.enjoy-onepage.com/terms.html</link>
+    <guid isPermaLink="true">https://breath-to-wage-counter.enjoy-onepage.com/terms.html</guid>
+    <description>호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급의 서비스 이용약관입니다. 면책 조항 및 서비스 이용 기준을 안내합니다.</description>
+    <pubDate>Mon, 21 Sep 2026 23:09:11 +0900</pubDate>
+  </item>
+  <item>
+    <title>개인정보처리방침 - 호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급</title>
+    <link>https://breath-to-wage-counter.enjoy-onepage.com/privacy.html</link>
+    <guid isPermaLink="true">https://breath-to-wage-counter.enjoy-onepage.com/privacy.html</guid>
+    <description>호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급의 개인정보처리방침입니다. 본 도구는 사용자 데이터를 서버로 전송하지 않습니다.</description>
+    <pubDate>Mon, 21 Sep 2026 23:09:11 +0900</pubDate>
+  </item>
+  <item>
+    <title>직장인 실시간 호흡 시급 계산법과 직무 스트레스 완화 인지치료 가이드</title>
+    <link>https://breath-to-wage-counter.enjoy-onepage.com/guides/guide.html</link>
+    <guid isPermaLink="true">https://breath-to-wage-counter.enjoy-onepage.com/guides/guide.html</guid>
+    <description>자신의 연봉과 통상임금을 바탕으로 숨 쉴 때마다 실시간으로 누적되는 초당 급여 환산 원리, 업무 몰입과 번아웃 극복을 위한 인지행동치료(CBT)적 효능을 분석합니다.</description>
+    <pubDate>Mon, 21 Sep 2026 22:49:22 +0900</pubDate>
+  </item>
+</channel>
+</rss>
