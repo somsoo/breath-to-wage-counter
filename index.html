@@ -1,556 +1,457 @@
 <!DOCTYPE html>
-
 <html lang="ko">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급</title>
-<meta content="연봉을 초당 급여로 환산해 숨 한 번(4초)마다 쌓이는 돈을 보여주는 직장인 힐링 도구입니다." name="description"/>
-<link href="https://breath-to-wage-counter.enjoy-onepage.com/" rel="canonical"/>
-<!-- OpenGraph -->
-<meta content="website" property="og:type"/>
-<meta content="호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급" property="og:title"/>
-<meta content="연봉을 초당 급여로 환산해 숨 한 번(4초)마다 쌓이는 돈을 보여주는 직장인 힐링 도구입니다." property="og:description"/>
-<meta content="https://breath-to-wage-counter.enjoy-onepage.com/" property="og:url"/>
-<meta content="https://breath-to-wage-counter.enjoy-onepage.com/og-image.png" property="og:image"/>
-<meta content="ko_KR" property="og:locale"/>
-<!-- Twitter Card -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급" name="twitter:title"/>
-<meta content="연봉을 초당 급여로 환산해 숨 한 번(4초)마다 쌓이는 돈을 보여주는 직장인 힐링 도구입니다." name="twitter:description"/>
-<meta content="https://breath-to-wage-counter.enjoy-onepage.com/og-image.png" name="twitter:image"/>
-<!-- Favicon & Icons -->
-<link href="./favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="./favicon.ico" rel="apple-touch-icon"/>
-<!-- Tailwind & AdSense -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106"></script>
-<!-- Layout Shield & CLS Defense -->
-<style>
-    html, body { max-width: 100%; overflow-x: hidden; }
-    .manual-ad-box { width: 100%; max-width: 960px; overflow: hidden; margin: 16px auto; }
-    .manual-ad-box ins { max-width: 100% !important; overflow: hidden !important; }
-  </style>
-<!-- Schema.org JSON-LD -->
+<meta name="description" content="세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분, 1시간 단위 금액으로 바꾸고, 일하는 동안 쌓이는 돈을 실시간으로 셉니다. 기기 안에서만 계산하며 무료입니다.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://breath-to-wage-counter.enjoy-onepage.com/">
+<meta name="theme-color" content="#0f766e">
+<link rel="icon" href="/favicon.ico">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="호흡당 급여 카운터">
+<meta property="og:title" content="호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급">
+<meta property="og:description" content="세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분, 1시간 단위 금액으로 바꾸고, 일하는 동안 쌓이는 돈을 실시간으로 셉니다. 기기 안에서만 계산하며 무료입니다.">
+<meta property="og:url" content="https://breath-to-wage-counter.enjoy-onepage.com/">
+<meta property="og:image" content="https://breath-to-wage-counter.enjoy-onepage.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급">
+<meta name="twitter:description" content="세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분, 1시간 단위 금액으로 바꾸고, 일하는 동안 쌓이는 돈을 실시간으로 셉니다. 기기 안에서만 계산하며 무료입니다.">
+<meta name="twitter:image" content="https://breath-to-wage-counter.enjoy-onepage.com/og-image.png">
+<link rel="alternate" type="application/rss+xml" title="호흡당 급여 카운터 RSS" href="https://breath-to-wage-counter.enjoy-onepage.com/rss.xml">
+<link rel="sitemap" type="application/xml" href="https://breath-to-wage-counter.enjoy-onepage.com/sitemap.xml">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급",
-  "url": "https://breath-to-wage-counter.enjoy-onepage.com/",
-  "description": "연봉 기반 실시간 초당 급여 환산: 숨 한 번 쉴 때마다(4초 주기) 통장에 쌓이는 화폐 가치를 시각화하여 직장인 번아웃을 극복하는 인지 힐링 도구입니다.",
-  "applicationCategory": "UtilityApplication",
-  "operatingSystem": "All",
-  "offers": {
-    "@type": "Offer",
-    "price": "0",
-    "priceCurrency": "KRW"
-  },
-  "mainEntity": {
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "호흡당 급여는 어떤 공식으로 계산되나요?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "근로기준법상 주 40시간(월 209시간) 기준 통상시급을 3,600초로 나누어 초당 급여를 구한 뒤, 성인의 안정 호흡 주기인 4초를 곱하여 실시간 누적합니다."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "실시간 카운터를 켜두면 번아웃 예방에 도움이 되나요?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "네, 인지행동치료(CBT) 연구에 따르면 노동의 경제적 가치를 실시간으로 시각화할 때 스트레스 호르몬이 감소하고 즉각적인 심리적 보상감이 형성됩니다."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "화면을 계속 켜두면 스마트폰 배터리가 빨리 닳나요?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "초경량 Vanilla JS와 가속 타이머로 설계되어 CPU 점유율이 0.5% 미만이며 배터리 소모를 극소화했습니다."
-        }
-      }
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://breath-to-wage-counter.enjoy-onepage.com/#webapp",
+      "name": "호흡당 급여 카운터",
+      "url": "https://breath-to-wage-counter.enjoy-onepage.com/",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "All",
+      "inLanguage": "ko",
+      "description": "세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분, 1시간, 하루, 한 달, 1년 단위 금액으로 바꾸고, 일하는 동안 쌓이는 급여를 기기 시계로 실시간으로 세는 무료 도구입니다.",
+      "image": "https://breath-to-wage-counter.enjoy-onepage.com/og-image.png",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://breath-to-wage-counter.enjoy-onepage.com/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "1초에 얼마를 버는지 어떻게 계산하나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "시급을 1시간의 초 수인 3,600으로 나눕니다. 월급이면 먼저 한 달 유급 시간(기본 209시간)으로 나눠 시급을 구합니다. 예를 들어 세전 월급 300만 원은 시급 약 14,354원, 1초에 약 3.99원, 숨 한 번(4초)에 약 15.95원입니다." } },
+        { "@type": "Question", "name": "209시간은 어디서 나온 숫자인가요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "주 40시간 일하고 주휴 8시간을 받는 경우를 한 달로 나눈 값입니다. 1주 48시간 × 365일 ÷ 7일 ÷ 12개월 ≈ 208.6시간을 올림했습니다. 근무 시간이 다르거나 주휴가 없으면 한 달 유급 시간을 바꿔 넣으세요." } },
+        { "@type": "Question", "name": "세금을 뗀 금액인가요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "아니요, 세전 금액입니다. 입력한 급여에서 세금과 4대 보험료를 빼기 전 금액으로 계산하므로 실제로 통장에 들어오는 돈은 이보다 적습니다." } },
+        { "@type": "Question", "name": "쉬는 시간이나 이미 시작한 근무도 셀 수 있나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "쉬는 시간에는 잠깐 멈춤을 누르고, 돌아오면 이어서를 누르세요. 시작을 누르지 못했다면 출근한 시각을 넣고 '이 시각부터 세기'를 누르면 그 시각부터 셉니다. 급여를 바꾸면 이미 쌓인 금액은 그대로 두고 그때부터 새 금액으로 셉니다." } },
+        { "@type": "Question", "name": "급여가 저장되거나 어디로 보내지나요?",
+          "acceptedAnswer": { "@type": "Answer", "text": "아니요. 계산은 이 브라우저 안에서만 하고 아무것도 저장하지 않아, 페이지를 닫으면 사라집니다. 결과 복사나 공유하기를 누를 때만 급여가 링크 주소에 들어가며, 그 링크를 연 사람은 같은 결과를 봅니다." } }
+      ]
+    }
+  ]
 }
-  </script>
-
-  <!-- Section 13: Mobile Typography & Button Shield Standard -->
-  <style id="mobile-hardening-shield">
-    /* 모바일 한글 단어 단위 줄바꿈 보장 & 버튼 텍스트 줄바꿈 방지 */
-    body, h1, h2, h3, h4, p, span, label {
-      word-break: keep-all;        /* 한글 단어가 중간에 잘리지 않게 단어 단위 줄바꿈 */
-      overflow-wrap: break-word;   /* 긴 영문 URL 화면 이탈 방지 */
-    }
-    button, [role="button"], a.btn {
-      white-space: nowrap;         /* 좁은 폭에서 버튼 글자가 2줄로 찌그러지는 것 방지 */
-      word-break: keep-all;
-    }
-    @media (max-width: 640px) {
-      input, select, textarea {
-        font-size: 16px !important; /* iOS 포커스 시 화면 강제 확대 방지 */
-      }
-      button, [role="button"], a.btn {
-        min-height: 42px;          /* WCAG 모바일 터치 타깃 확보 */
-      }
-    }
-  </style>
-
-<link rel="alternate" type="application/rss+xml" title="호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급" href="https://breath-to-wage-counter.enjoy-onepage.com/rss.xml">
-<link rel="sitemap" type="application/xml" href="https://breath-to-wage-counter.enjoy-onepage.com/sitemap.xml">
+</script>
+<!-- ADSENSE START: loader -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
+<!-- ADSENSE END: loader -->
+<style>
+:root{--bg:#f2faf8;--card:#fff;--ink:#11282a;--muted:#566d6c;--accent:#0f766e;--line:#d8ebe7;--r:#b91c1c}
+*{box-sizing:border-box}
+html,body{margin:0;max-width:100%;overflow-x:hidden}
+body{font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;word-break:keep-all;overflow-wrap:anywhere}
+.header{background:linear-gradient(135deg,#115e59,#14b8a6);color:#fff;text-align:center;padding:26px 16px 22px}
+.header h1{margin:0;font-size:1.7rem}
+.header-sub{opacity:.92;margin-top:6px;font-size:.95rem}
+.wrap{max-width:1080px;margin:0 auto;padding:12px 14px 8px}
+.grid2{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:1024px){.grid2{grid-template-columns:1fr 1fr;align-items:start}.result{position:sticky;top:12px}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 18px;margin:14px 0}
+.grid2 .card{margin:0}
+.card h2{font-size:1.1rem;margin:0 0 10px}
+.card h3{font-size:1rem;margin:16px 0 8px}
+.lbl{display:block;font-weight:600;margin:10px 0 4px;font-size:.95rem}
+input[type=number],input[type=time],select,textarea{width:100%;font:inherit;padding:9px 11px;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.hint{font-size:.86rem;color:var(--muted);margin:6px 0}
+.btn{font:inherit;border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:10px;padding:9px 14px;cursor:pointer;min-height:44px}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.inline{display:flex;gap:8px;align-items:center}
+.inline input{flex:1 1 auto;min-width:0}
+.inline .btn{flex:0 0 auto}
+.err{color:var(--r);font-weight:600;margin:10px 0 0}
+.status-line{font-size:.88rem;color:var(--muted);margin:8px 0 0;min-height:1.2em}
+.tick{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:2.6rem;font-weight:800;color:var(--accent);letter-spacing:-.5px;line-height:1.15;margin:2px 0;word-break:break-all}
+.tick small{font-size:1.3rem;opacity:.7}
+.tick-sub{color:var(--muted);margin:2px 0}
+.tick-clock{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--ink);font-size:.95rem}
+.brk{width:100%;border-collapse:collapse}
+.brk th{text-align:left;font-weight:600;padding:7px 0;border-top:1px solid var(--line)}
+.brk td{text-align:right;padding:7px 0;border-top:1px solid var(--line);font-variant-numeric:tabular-nums}
+.brk tr.hl th,.brk tr.hl td{color:var(--accent);font-weight:800}
+.copy-box{margin-top:8px;font-size:.88rem;min-height:150px}
+.faq-item h3{font-size:1rem;margin:12px 0 4px}
+.faq-item p{margin:0;color:#33504d}
+.notice{border-color:#fcd34d;background:#fffbeb}
+.ad-box{max-width:1080px;margin:10px auto;padding:0 14px;background:transparent;overflow:hidden;text-align:center}
+.ad-top ins{max-height:90px}
+.footer{text-align:center;font-size:.85rem;color:var(--muted);padding:18px 14px 28px}
+.footer a{color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#11282a;color:#fff;padding:10px 18px;border-radius:999px;font-size:.9rem;opacity:0;pointer-events:none;transition:opacity .2s;z-index:50;max-width:90vw}
+.toast.show{opacity:1}
+@media (prefers-reduced-motion: reduce){.toast{transition:none}}
+</style>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans min-h-screen flex flex-col justify-between">
-<!-- Header -->
-<header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-30">
-<div class="max-w-xl mx-auto px-4 py-3 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="text-xl">🫁</span>
-<h1 class="text-sm font-bold tracking-tight text-emerald-400">초단위 숨쉬기 정산소 (Breath-to-Wage)</h1>
-</div>
-<a class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-lg border border-slate-700 transition" href="guides/guide.html">
-        가이드
-      </a>
-</div>
+<body>
+<header class="header">
+  <h1>호흡당 급여 카운터</h1>
+  <div class="header-sub">세전 급여를 1초·숨 한 번 단위로 · 무료, 가입 없음, 저장 안 함</div>
 </header>
 
-  <!-- Top Slim Ad Banner (50~60px) -->
+<!-- ADSENSE START: top -->
+<div class="ad-box ad-top">
+  <ins class="adsbygoogle" style="display:block;height:60px;max-height:90px" data-ad-client="ca-pub-2228289204702106" data-ad-slot="3824727725" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- ADSENSE END: top -->
 
-    <!-- Section 16-1: Featured Snippet 3-Second Instant Answer Box -->
-  <section class="max-w-4xl mx-auto px-4 pt-3 pb-2">
-    <div class="featured-snippet-box bg-gradient-to-br from-indigo-900 to-slate-900 text-white rounded-2xl p-5 sm:p-6 shadow-md border border-indigo-700/40 space-y-2.5">
-      <div class="flex items-center gap-2">
-        <span class="bg-indigo-500/30 text-indigo-300 text-xs font-extrabold px-3 py-1 rounded-full border border-indigo-400/30">
-          ⚡ 2026 숨만 쉬어도 나가는 내 시급/초봉 핵심 요약
-        </span>
-        <span class="text-xs text-slate-400 font-medium">2026 고용노동부 최저임금(10,030원) 및 근로기준법 통상시간 기준</span>
+<main class="wrap">
+  <div class="grid2">
+    <section class="card" aria-labelledby="in-h">
+      <h2 id="in-h">1. 내 급여</h2>
+      <div class="row2">
+        <div><label class="lbl" for="pay">세전 급여(원)</label><input id="pay" type="number" inputmode="numeric" min="0" step="any" placeholder="예: 3000000"></div>
+        <div><label class="lbl" for="per">급여 기준</label>
+          <select id="per">
+            <option value="month" selected>월급</option>
+            <option value="year">연봉</option>
+            <option value="hour">시급</option>
+          </select></div>
       </div>
-      <h3 class="text-base sm:text-lg font-black leading-snug text-white">
-        월급 슬라이더 조절 후 [루팡 개시] 클릭 시 0.1초마다 내 계좌에 쌓이는 초당 급여 실시간 계측
-      </h3>
-      <ul class="space-y-1 text-xs text-slate-200 leading-relaxed list-disc list-inside">
-        <li><strong>정밀 초단위 환산 산식:</strong> 월 소정근로시간 209시간(주휴수당 포함 752,400초) 기준 밀리초 단위 급여 누적 알고리즘.</li>
-        <li><strong>생활밀착형 환산 지표:</strong> 적립 급여액에 따른 붕어빵, 커피, 치킨 환산 개수가 실시간 그래픽으로 연동.</li>
-        <li><strong>100% 로컬 보안 타이머:</strong> 어떤 회사 정보나 급여 수치도 서버에 남지 않는 직장인 번아웃 힐링 유틸리티.</li>
-      </ul>
-    </div>
-  </section>
+      <label class="lbl" for="mh">한 달 유급 시간</label>
+      <input id="mh" type="number" inputmode="decimal" min="1" max="744" step="any" value="209">
+      <p class="hint">기본값 209시간은 주 40시간 근무에 주휴 8시간을 더해 한 달로 나눈 값입니다((40 + 8) × 365 ÷ 7 ÷ 12 ≈ 208.6을 올림). 근무 시간이 다르면 바꿔 넣으세요. 연봉은 12로 나눠 월급으로 봅니다.</p>
+      <p class="hint">세금과 4대 보험료를 빼기 전 금액을 넣으세요.</p>
+      <p class="err" id="err" role="alert" hidden></p>
+    </section>
 
-  <!-- Section 16-2: Visual 3-Step HowTo & KBD Keyboard Standard -->
-  <section class="max-w-4xl mx-auto px-4 py-2.5">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
-      <div class="step-card bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-3">
-        <div class="step-badge w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-black text-sm shrink-0">01</div>
-        <div>
-          <h4 class="font-bold text-sm text-slate-900 dark:text-white">월 급여 슬라이더 조정</h4>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">상단 급여 슬라이더를 좌우로 드래그하여 본인의 세전 월급(100만 원 ~ 1,000만 원)을 맞춥니다.</p>
-        </div>
+    <section class="card result" aria-labelledby="out-h">
+      <h2 id="out-h">2. 실시간 급여 카운터</h2>
+      <div class="tick" id="tick" aria-live="off"><span id="tick-i">0</span><small id="tick-f">.00원</small></div>
+      <div class="tick-sub" id="tick-sub" aria-live="polite">세전 급여를 넣으면 카운터를 쓸 수 있습니다.</div>
+      <div class="tick-clock" id="tick-clock">근무 시간 00:00:00 · 숨 0번</div>
+      <div class="actions">
+        <button type="button" class="btn primary" id="btn-start" disabled>▶ 시작</button>
+        <button type="button" class="btn" id="btn-reset" disabled>↺ 처음부터</button>
       </div>
-      <div class="step-card bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-3">
-        <div class="step-badge w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-black text-sm shrink-0">02</div>
-        <div>
-          <h4 class="font-bold text-sm text-slate-900 dark:text-white"><kbd class="px-1.5 py-0.5 text-[10px] font-semibold text-slate-800 bg-slate-100 border border-slate-300 rounded">[🚀루팡 개시 (Start)]</kbd> 클릭</h4>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1"><kbd class="px-1.5 py-0.5 text-[10px] font-semibold text-slate-800 bg-slate-100 border border-slate-300 rounded">[🚀루팡 개시 (Start)]</kbd> 버튼을 누르면 1초마다 실시간으로 급여가 적립되며 붕어빵·커피 카운터가 함께 올라갑니다.</p>
-        </div>
-      </div>
-      <div class="step-card bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm flex items-start gap-3">
-        <div class="step-badge w-8 h-8 rounded-full bg-indigo-600 text-white flex items-center justify-center font-black text-sm shrink-0">03</div>
-        <div>
-          <h4 class="font-bold text-sm text-slate-900 dark:text-white">초단위 누적액 확인 & 단톡방 공유</h4>
-          <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">퇴근 전까지 모인 <strong>총 루팡 급여액</strong>을 확인하고, <kbd class="px-1.5 py-0.5 text-[10px] font-semibold text-slate-800 bg-slate-100 border border-slate-300 rounded">[📋단톡방 공유용 텍스트 복사]</kbd>로 동료들과 소소한 재미를 나눕니다.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <label class="lbl" for="since">시작을 늦게 눌렀다면 출근한 시각</label>
+      <div class="inline"><input id="since" type="time" value="09:00"><button type="button" class="btn" id="btn-since" disabled>이 시각부터 세기</button></div>
+      <p class="status-line" id="tick-msg" role="status"></p>
 
-  <div class="manual-ad-box text-center my-3" style="min-height: 60px;">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-2228289204702106"
-         data-ad-slot="3824727725"
-         data-ad-format="horizontal"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      <h3>내 급여를 잘게 나누면</h3>
+      <table class="brk">
+        <tr class="hl"><th scope="row">1초</th><td id="v-sec">–</td></tr>
+        <tr class="hl"><th scope="row">숨 한 번(4초)</th><td id="v-breath">–</td></tr>
+        <tr><th scope="row">1분</th><td id="v-min">–</td></tr>
+        <tr><th scope="row">1시간(시급)</th><td id="v-hour">–</td></tr>
+        <tr><th scope="row">하루 8시간</th><td id="v-day">–</td></tr>
+        <tr><th scope="row">한 달</th><td id="v-month">–</td></tr>
+        <tr><th scope="row">1년</th><td id="v-year">–</td></tr>
+      </table>
+      <p class="hint" id="ms"></p>
+      <label class="lbl" for="item">사고 싶은 것 값(원, 선택)</label>
+      <input id="item" type="number" inputmode="numeric" min="0" step="any" placeholder="예: 45000">
+      <p class="status-line" id="item-msg" role="status"></p>
+      <div class="actions">
+        <button type="button" class="btn primary" id="btn-copy" disabled>📋 결과 복사</button>
+        <button type="button" class="btn" id="btn-share" disabled>📤 공유하기</button>
+      </div>
+      <textarea id="copy-box" class="copy-box" readonly hidden aria-label="복사할 결과"></textarea>
+    </section>
   </div>
 
+<!-- ADSENSE START: mid (right after the result card) -->
+<div class="ad-box ad-mid">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2228289204702106" data-ad-slot="1186914926" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<!-- ADSENSE END: mid -->
 
-<!-- Main Viewport: Single Focused Card (Type B) -->
-<main class="max-w-xl mx-auto px-4 py-4 w-full flex-grow flex flex-col justify-center">
-<div class="bg-slate-900 border border-slate-800 rounded-3xl p-6 shadow-2xl text-center relative overflow-hidden">
-<!-- Live Counter Display -->
-<div class="my-6">
-<p class="text-xs font-semibold text-slate-400 tracking-wider uppercase mb-1">CURRENT RECOVERED WAGE</p>
-<div class="text-5xl font-black font-mono tracking-tight text-emerald-400 neon-pulse" id="wage-counter">
-          0.00<span class="text-2xl text-emerald-600">원</span>
-</div>
-<p class="text-xs text-slate-500 mt-2 font-mono" id="time-ticker">체류 시간: 00:00</p>
-</div>
-<!-- Snack Milestone Badge (15s Lock-in) -->
-<div class="bg-slate-950/80 border border-slate-800 rounded-2xl p-3 my-4">
-<div class="flex justify-between text-xs text-slate-400 mb-1.5">
-<span id="milestone-label">🔒 최소 15초 유지 시 정식 직인 발급</span>
-<span class="font-mono text-emerald-400" id="milestone-progress">0 / 15s</span>
-</div>
-<div class="w-full bg-slate-800 h-2 rounded-full overflow-hidden">
-<div class="bg-emerald-500 h-full w-0 transition-all duration-300" id="progress-bar"></div>
-</div>
-<p class="text-xs text-slate-400 mt-2 font-medium" id="snack-status">현재 등가 보상: 숨쉬기 대기 중</p>
-</div>
-<!-- Salary Slider -->
-<div class="my-5 text-left bg-slate-950/40 p-3.5 rounded-2xl border border-slate-800/60">
-<div class="flex justify-between items-center mb-1.5">
-<label class="text-xs font-bold text-slate-300" for="salary-slider">내 월 세전 급여 설정</label>
-<span class="text-xs font-mono font-bold text-emerald-400" id="salary-val-text">350만 원</span>
-</div>
-<input class="w-full accent-emerald-500 cursor-pointer" id="salary-slider" max="600" min="200" step="50" type="range" value="350"/>
-</div>
-<!-- Main Action Buttons -->
-<div class="flex gap-3 mt-4">
-<button class="flex-1 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black py-4 px-6 rounded-2xl text-base shadow-lg shadow-emerald-500/20 transition duration-150 flex items-center justify-center gap-2" id="toggle-btn">
-<span>🚀</span> <span id="toggle-text">루팡 개시 (Start)</span>
-</button>
-<button class="px-4 py-4 bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold rounded-2xl text-sm transition" id="reset-btn">
-          초기화
-        </button>
-</div>
-<!-- Receipt Result Modal / Box (Hidden until finish) -->
-<div class="mt-6 bg-white text-slate-900 rounded-2xl p-5 text-left border-4 border-slate-200 hidden font-mono shadow-2xl relative" id="receipt-card">
-<div class="text-center border-b-2 border-dashed border-slate-300 pb-3 mb-3">
-<p class="text-xs font-bold tracking-widest text-slate-500">OFFICIAL SLACKER RECEIPT</p>
-<h2 class="text-lg font-black text-slate-900 mt-0.5">합법적 루팡 정산 영수증</h2>
-<p class="text-xs text-slate-400" id="receipt-date"></p>
-</div>
-<div class="space-y-1.5 text-xs text-slate-700">
-<div class="flex justify-between"><span>총 체류 시간:</span><span class="font-bold" id="r-time">0분 0초</span></div>
-<div class="flex justify-between"><span>사측 회수 세후 소득:</span><span class="font-bold text-emerald-600" id="r-wage">0.00원</span></div>
-<div class="flex justify-between"><span>현물 등가 교환:</span><span class="font-bold" id="r-snack">믹스커피 0잔</span></div>
-<div class="flex justify-between pt-1 border-t border-slate-200">
-<span>오늘의 루팡 직급:</span>
-<span class="font-black text-indigo-600" id="r-rank">[3급: 화장실 은둔형 책략가]</span>
-</div>
-</div>
-<div class="mt-4 pt-3 border-t-2 border-dashed border-slate-300 flex flex-col gap-2">
-<button class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition" id="copy-btn">
-<span>📋</span> 단톡방 공유용 텍스트 복사
-          </button>
-</div>
-</div>
-</div>
-<!-- FAQ Accordion -->
-<section class="mt-6 bg-slate-900 border border-slate-800 rounded-2xl p-5 text-xs text-slate-400">
-<h3 class="font-bold text-slate-300 text-sm mb-2">초단위 숨쉬기 정산소 원리 FAQ</h3>
-<details class="group cursor-pointer">
-<summary class="font-semibold text-slate-300 list-none flex justify-between py-1">
-<span>Q. 초당 급여는 어떤 기준으로 계산되나요?</span>
-<span class="text-slate-500 group-open:rotate-180 transition">▼</span>
-</summary>
-<p class="mt-1.5 text-slate-400 leading-relaxed">
-          주 40시간(월 209시간 법정 근로시간) 기준으로 월 급여를 초단위로 분할하여 실시간(1초 = 월급 / 209 / 3600) 산출합니다.
-        </p>
-</details>
-</section>
+  <section class="card" aria-labelledby="how-h">
+    <h2 id="how-h">🧮 계산 방법</h2>
+    <ul>
+      <li><strong>시급:</strong> 월급을 한 달 유급 시간(기본 209시간)으로 나눕니다. 연봉은 12로 나눠 월급으로 보고, 시급을 넣으면 그대로 씁니다.</li>
+      <li><strong>1초·1분·숨 한 번:</strong> 시급을 3,600과 60으로 나누고, 1초 금액에 4를 곱해 숨 한 번 금액을 구합니다. 이 도구는 숨 한 번을 4초(1분에 15번)로 셉니다. 실제로 숨 쉬는 빠르기와는 다를 수 있습니다.</li>
+      <li><strong>하루·한 달·1년:</strong> 하루는 시급 × 8시간, 한 달은 월급(시급을 넣었다면 시급 × 한 달 유급 시간), 1년은 한 달 × 12입니다.</li>
+      <li><strong>실시간 카운터:</strong> 기기 시계로 근무 시간을 재서 1초 금액을 곱합니다. 화면이 꺼지거나 다른 탭으로 옮겨도 틀어지지 않습니다. 멈춘 동안에는 세지 않고, 급여를 바꾸면 이미 쌓인 금액은 두고 그때부터 새 금액으로 셉니다.</li>
+      <li><strong>세전 기준:</strong> 모든 금액은 세금과 4대 보험료를 빼기 전 금액입니다.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">❓ 자주 묻는 질문</h2>
+    <div class="faq-item"><h3>1초에 얼마를 버는지 어떻게 계산하나요?</h3><p>시급을 1시간의 초 수인 3,600으로 나눕니다. 월급이면 먼저 한 달 유급 시간(기본 209시간)으로 나눠 시급을 구합니다. 예를 들어 세전 월급 300만 원은 시급 약 14,354원, 1초에 약 3.99원, 숨 한 번(4초)에 약 15.95원입니다.</p></div>
+    <div class="faq-item"><h3>209시간은 어디서 나온 숫자인가요?</h3><p>주 40시간 일하고 주휴 8시간을 받는 경우를 한 달로 나눈 값입니다. 1주 48시간 × 365일 ÷ 7일 ÷ 12개월 ≈ 208.6시간을 올림했습니다. 근무 시간이 다르거나 주휴가 없으면 한 달 유급 시간을 바꿔 넣으세요.</p></div>
+    <div class="faq-item"><h3>세금을 뗀 금액인가요?</h3><p>아니요, 세전 금액입니다. 입력한 급여에서 세금과 4대 보험료를 빼기 전 금액으로 계산하므로 실제로 통장에 들어오는 돈은 이보다 적습니다.</p></div>
+    <div class="faq-item"><h3>쉬는 시간이나 이미 시작한 근무도 셀 수 있나요?</h3><p>쉬는 시간에는 잠깐 멈춤을 누르고, 돌아오면 이어서를 누르세요. 시작을 누르지 못했다면 출근한 시각을 넣고 '이 시각부터 세기'를 누르면 그 시각부터 셉니다. 급여를 바꾸면 이미 쌓인 금액은 그대로 두고 그때부터 새 금액으로 셉니다.</p></div>
+    <div class="faq-item"><h3>급여가 저장되거나 어디로 보내지나요?</h3><p>아니요. 계산은 이 브라우저 안에서만 하고 아무것도 저장하지 않아, 페이지를 닫으면 사라집니다. 결과 복사나 공유하기를 누를 때만 급여가 링크 주소에 들어가며, 그 링크를 연 사람은 같은 결과를 봅니다.</p></div>
+  </section>
+
+  <section class="card notice" aria-labelledby="note-h">
+    <h2 id="note-h">⚠️ 알아 두세요</h2>
+    <p>입력한 숫자로 계산한 세전 급여 추정치입니다. 실제 급여 명세나 세금 계산이 아니며, 금융·세무·법률 조언도 아닙니다. 실제로 받는 금액은 급여 명세서와 회사의 급여 기록에서 확인하세요.</p>
+  </section>
 </main>
 
-<div class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-white text-slate-900 font-bold text-xs px-5 py-2.5 rounded-full shadow-2xl transition-opacity duration-300 opacity-0 pointer-events-none z-50" id="toast">
-    단톡방 공유 카피가 복사되었습니다!
-  </div>
-<!-- E-E-A-T In-Depth Guidebook & FAQ & Hub-and-Spoke Links -->
-<section class="max-w-4xl mx-auto px-4 py-8 space-y-8">
-<!-- Hub & Spoke Magazine Guide Banner -->
-<div class="bg-gradient-to-r from-indigo-50 to-blue-50 dark:from-indigo-950/40 dark:to-blue-950/40 border border-indigo-100 dark:border-indigo-800/50 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
-<div class="space-y-2 text-center sm:text-left">
-<span class="text-xs font-bold text-indigo-600 dark:text-indigo-400 uppercase tracking-wider">2,000자+ 전문 매거진 심층 분석</span>
-<h2 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">
-          호흡당 급여 카운터 완벽 해설 가이드북
-        </h2>
-<p class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 max-w-xl leading-relaxed">
-          법령 산식, 2026년 최신 고시, 상황별 비교 분석표 및 실무 절세·행동 요령이 수록된 전문 가이드북을 지금 무료로 확인하세요.
-        </p>
+<!-- ADSENSE START: bottom -->
+<div class="ad-box ad-bottom">
+  <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-2228289204702106" data-ad-slot="3416334507" data-ad-format="auto" data-full-width-responsive="true"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 </div>
-<a class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-6 py-3.5 rounded-xl transition shadow hover:shadow-md text-sm whitespace-nowrap" href="./guides/guide.html">
-<span>📖</span> <span>심층 가이드북 읽기 →</span>
-</a>
-</div>
-<!-- FAQ Accordion -->
-<div class="space-y-4">
-<div class="border-b border-slate-200 dark:border-slate-800 pb-3">
-<h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-<span>💡</span> 자주 묻는 질문 (E-E-A-T FAQ 3선)
-        </h2>
-</div>
-<div class="space-y-4">
-<div class="border border-slate-200 dark:border-slate-700 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm space-y-2">
-<h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
-<span class="text-indigo-600 dark:text-indigo-400 font-extrabold">Q.</span> 호흡당 급여는 어떤 공식으로 계산되나요?
-          </h3>
-<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed pl-6">
-            근로기준법상 주 40시간(월 209시간) 기준 통상시급을 3,600초로 나누어 초당 급여를 구한 뒤, 성인의 안정 호흡 주기인 4초를 곱하여 실시간 누적합니다.
-          </p>
-</div>
-<div class="border border-slate-200 dark:border-slate-700 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm space-y-2">
-<h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
-<span class="text-indigo-600 dark:text-indigo-400 font-extrabold">Q.</span> 실시간 카운터를 켜두면 번아웃 예방에 도움이 되나요?
-          </h3>
-<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed pl-6">
-            네, 인지행동치료(CBT) 연구에 따르면 노동의 경제적 가치를 실시간으로 시각화할 때 스트레스 호르몬이 감소하고 즉각적인 심리적 보상감이 형성됩니다.
-          </p>
-</div>
-<div class="border border-slate-200 dark:border-slate-700 rounded-xl p-5 bg-white dark:bg-slate-800 shadow-sm space-y-2">
-<h3 class="font-bold text-base text-slate-900 dark:text-white flex items-center gap-2">
-<span class="text-indigo-600 dark:text-indigo-400 font-extrabold">Q.</span> 화면을 계속 켜두면 스마트폰 배터리가 빨리 닳나요?
-          </h3>
-<p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed pl-6">
-            초경량 Vanilla JS와 가속 타이머로 설계되어 CPU 점유율이 0.5% 미만이며 배터리 소모를 극소화했습니다.
-          </p>
-</div>
-</div>
-</div>
-<!-- Official Legal Disclaimer -->
-<div class="bg-slate-100 dark:bg-slate-800/60 rounded-xl p-5 border border-slate-200 dark:border-slate-700 text-xs text-slate-500 dark:text-slate-400 space-y-1.5 leading-relaxed">
-<div class="font-bold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
-<span>⚖️</span> <span>법적 고지 및 면책 조항 (Legal Disclaimer)</span>
-</div>
-<p>
-        본 웹 애플리케이션의 모든 연산 결과와 시뮬레이션 수치는 2026년 최신 관계 법령 및 표준 산식을 기초로 산출된 참고용 추정치입니다. 실제 개별 세무 정산, 대출 승인, 정부 지원금 수령 등은 개인의 구체적 조건에 따라 차이가 발생할 수 있습니다. 본 사이트는 도구의 계산 결과를 근거로 한 금융·법률적 결정에 대해 법적 책임을 지지 않습니다.
-      </p>
-</div>
-</section>
+<!-- ADSENSE END: bottom -->
 
-  <!-- Additional E-E-A-T In-depth Educational Guide & Action Checklist -->
-  <section class="max-w-4xl mx-auto px-4 py-6">
-    <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
-      <h2 class="text-xl font-bold text-slate-900 dark:text-white flex items-center gap-2">
-        <span>📋</span> 2026년 실무 핵심 활용 전략 및 실천 가이드
-      </h2>
-      <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-        본 도구는 최신 2026년 제도 기준과 수학적 공식에 기반하여 설계되었습니다. 정확한 결과 도출을 위해 아래 3대 실천 수칙을 준수하시기 바랍니다:
-      </p>
-      <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300 list-disc list-inside leading-relaxed pl-2">
-        <li><strong>정확한 기본 데이터 입력:</strong> 공식 증빙 서류(근로계약서, 소득금액증명원, 영수증 등)에 기재된 정확한 세전/세후 수치를 입력하세요.</li>
-        <li><strong>결과 검토 및 시뮬레이션:</strong> 단일 조건에 안주하지 않고 다양한 변수(기간 연장, 금리 변동, 할인율 적용 등)를 대입하여 최적의 플랜을 수립하세요.</li>
-        <li><strong>공식 가이드북 대조:</strong> 상세한 법령 배경과 심층 비교표가 수록된 <a href="./guides/guide.html" class="text-indigo-600 dark:text-indigo-400 font-bold underline hover:text-indigo-800">2026 전문 매거진 가이드북</a>을 통해 실무적인 유의사항을 최종 점검하세요.</li>
-      </ul>
-      <div class="pt-4 border-t border-slate-100 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400">
-        ※ 본 유틸리티의 모든 연산은 외부 서버로 전송되지 않는 100% 클라이언트 로컬 보안 연산입니다. 안심하고 자유롭게 활용하세요.
-      </div>
-    </div>
-  </section>
-
-
-
-
-  <!-- Bottom Large Ad Banner -->
-  <div class="manual-ad-box text-center my-6">
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="ca-pub-2228289204702106"
-         data-ad-slot="3416334507"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-  </div>
-
-
-  <!-- Section 16-4: Mobius Loop Topic Cluster Cross-Link Banner -->
-  <section class="max-w-4xl mx-auto px-4 my-6">
-    <div class="mobius-loop-banner bg-slate-900 text-white rounded-2xl p-6 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
-      <div class="space-y-1 text-center sm:text-left">
-        <div class="flex items-center justify-center sm:justify-start gap-2">
-          <span class="text-xs font-bold text-indigo-400 uppercase tracking-wider">뫼비우스 트래픽 순환 공식 파트너</span>
-          <span class="text-xs bg-slate-800 text-slate-300 px-2 py-0.5 rounded font-mono">life-kr</span>
-        </div>
-        <h4 class="text-base sm:text-lg font-bold text-white">
-          직장인 번아웃 증후군 극복 및 업무 몰입 심리학 가이드
-        </h4>
-        <p class="text-xs text-slate-400">
-          전문 저널리스트가 심층 분석한 공식 정책·기술 데이터 리포트를 함께 읽어보세요.
-        </p>
-      </div>
-      <a href="https://life-kr.enjoy-onepage.com" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-5 py-2.5 rounded-xl transition text-xs whitespace-nowrap shadow">
-        <span>매거진 리포트 읽기</span> <span>→</span>
-      </a>
-    </div>
-  </section>
-
-<footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 text-center text-xs text-slate-500 dark:text-slate-400 mt-12">
-<div class="max-w-4xl mx-auto px-4 space-y-3">
-<div class="flex justify-center gap-4 text-xs font-medium">
-<a class="hover:underline" href="./index.html">메인 도구</a>
-<span>•</span>
-<a class="hover:underline" href="./guides/guide.html">전문 가이드북</a>
-<span>•</span>
-<a class="hover:underline" href="./privacy.html">개인정보처리방침</a>
-<span>•</span>
-<a class="hover:underline" href="./terms.html">이용약관</a>
-</div>
-<p>© 2026 enjoy-onepage.com. All rights reserved.</p>
-</div>
+<footer class="footer">
+  <p>무료 실시간 급여 카운터입니다. 입력한 내용은 이 기기에서만 계산하며 저장하거나 보내지 않습니다.</p>
+  <p><a href="/privacy.html">개인정보처리방침</a> | <a href="/terms.html">이용약관</a></p>
 </footer>
 
-  <script>
-    let isRunning = false;
-    let startTime = 0;
-    let timerId = null;
-    let audioCtx = null;
+<div id="global-ux-toast" class="toast" role="status" aria-live="polite"></div>
 
-    // Web Audio Cash Register Sound ("Cha-ching!")
-    function playCashSound() {
-      try {
-        if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-        if (audioCtx.state === 'suspended') audioCtx.resume();
-        const now = audioCtx.currentTime;
-        const osc = audioCtx.createOscillator();
-        const gain = audioCtx.createGain();
-        osc.type = 'triangle';
-        osc.frequency.setValueAtTime(987.77, now); // B5
-        osc.frequency.exponentialRampToValueAtTime(1318.51, now + 0.1); // E6
-        gain.gain.setValueAtTime(0.3, now);
-        gain.gain.exponentialRampToValueAtTime(0.01, now + 0.35);
-        osc.connect(gain);
-        gain.connect(audioCtx.destination);
-        osc.start(now);
-        osc.stop(now + 0.35);
-      } catch (e) {}
+<!-- LOGIC START -->
+<script>
+(function () {
+  'use strict';
+  var SITE = 'https://breath-to-wage-counter.enjoy-onepage.com';
+  var TOOL_NAME = '호흡당 급여 카운터';
+  var PER = ['month', 'year', 'hour'];
+  var PER_LABEL = { month: '월급', year: '연봉', hour: '시급' };
+  var BREATH_SEC = 4;                  /* this tool counts one breath as 4 seconds (15 a minute) */
+  var KEYS = ['sec', 'breath', 'min', 'hour', 'day', 'month', 'year'];
+  var MAX_YEAR = 100000000000;         /* 1,000억 원 a year */
+  var BASE_TITLE = document.title;
+
+  function $(id) { return document.getElementById(id); }
+  function on(id, ev, fn) { var el = $(id); if (el) el.addEventListener(ev, fn); }
+  function val(id) { var el = $(id); return el ? String(el.value).trim() : ''; }
+  function num(id) { var v = val(id); if (v === '') return null; var n = Number(v); return isFinite(n) ? n : NaN; }
+  function setText(id, t) { var el = $(id); if (el) el.textContent = t; }
+
+  /* ---------- pay math: gross pay; monthly pay / paid hours in a month (default 209) = hourly pay ---------- */
+  function monthlyOf(x) { return x.per === 'month' ? x.pay : (x.per === 'year' ? x.pay / 12 : x.pay * x.mh); }
+  function hourlyOf(x) { return x.per === 'hour' ? x.pay : monthlyOf(x) / x.mh; }
+  function breakdown(x) {
+    var hr = hourlyOf(x), M = monthlyOf(x);
+    return { sec: hr / 3600, breath: hr / 3600 * BREATH_SEC, min: hr / 60, hour: hr, day: hr * 8, month: M, year: M * 12 };
+  }
+  function readInputs() {
+    var per = val('per');
+    return { pay: num('pay'), per: PER.indexOf(per) >= 0 ? per : 'month', mh: num('mh') };
+  }
+  function validate(x) {
+    if (isNaN(x.pay) || x.pay <= 0) return '세전 급여를 0원보다 큰 숫자로 넣어 주세요.';
+    if (x.mh === null || isNaN(x.mh) || x.mh < 1 || x.mh > 744) return '한 달 유급 시간은 1시간부터 744시간 사이로 넣어 주세요.';
+    if (monthlyOf(x) * 12 > MAX_YEAR) return '1년에 1,000억 원이 넘습니다. 금액과 급여 기준을 확인해 주세요.';
+    return '';
+  }
+
+  /* ---------- formatting ---------- */
+  function won(v, dp) { return v.toLocaleString('ko-KR', { minimumFractionDigits: dp, maximumFractionDigits: dp }) + '원'; }
+  function fmtN(v) { return v.toLocaleString('ko-KR', { maximumFractionDigits: 2 }); }
+  function pad2(n) { return (n < 10 ? '0' : '') + n; }
+  function cents(v) { return Math.floor(v * 100 + 1e-6); }
+  function tickText(v) { var u = cents(v); return Math.floor(u / 100).toLocaleString('ko-KR') + '.' + pad2(u % 100) + '원'; }
+  function hms(ms) { var s = Math.floor(ms / 1000); return pad2(Math.floor(s / 3600)) + ':' + pad2(Math.floor(s % 3600 / 60)) + ':' + pad2(s % 60); }
+  function breaths(ms) { return Math.floor(ms / 1000 / BREATH_SEC).toLocaleString('ko-KR'); }
+  function dur(s) {
+    if (!(s >= 1)) return '1초 미만';
+    s = Math.round(s);
+    var h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), r = s % 60, out = [];
+    if (h) out.push(h.toLocaleString('ko-KR') + '시간');
+    if (m) out.push(m + '분');
+    if (r && !h) out.push(r + '초');
+    return out.join(' ');
+  }
+
+  /* ---------- live ticker: time on the clock x pay per second, read from the device clock ---------- */
+  var cur = null;
+  var T = { running: false, bank: 0, bankMs: 0, since: 0, rate: 0, timer: null };
+  function earned(n) { return T.bank + (T.running ? Math.max(0, n - T.since) / 1000 * T.rate : 0); }
+  function onClock(n) { return T.bankMs + (T.running ? Math.max(0, n - T.since) : 0); }
+  function paint() {
+    var n = Date.now(), e = earned(n), u = cents(e), ms = onClock(n);
+    setText('tick-i', Math.floor(u / 100).toLocaleString('ko-KR'));
+    setText('tick-f', '.' + pad2(u % 100) + '원');
+    setText('tick-clock', '근무 시간 ' + hms(ms) + ' · 숨 ' + breaths(ms) + '번');
+    document.title = T.running ? tickText(e) + ' · ' + TOOL_NAME : BASE_TITLE;
+  }
+  function bankNow() {
+    if (!T.running) return;
+    var n = Date.now(), d = Math.max(0, n - T.since);
+    T.bank += d / 1000 * T.rate;
+    T.bankMs += d;
+    T.since = n;
+  }
+  function subLine() {
+    if (T.running) return '1초에 ' + won(T.rate, 2) + '씩 세는 중입니다.' + (cur ? '' : ' 급여를 바꾸려면 1단계의 값을 고쳐 주세요.');
+    if (!cur) return val('pay') === '' ? '세전 급여를 넣으면 카운터를 쓸 수 있습니다.' : '1단계의 값을 고치면 카운터를 쓸 수 있습니다.';
+    var r = '1초에 ' + won(cur.b.sec, 2) + '씩';
+    if (T.bankMs > 0) return '멈춰 있습니다. 이어서를 누르면 ' + r + ' 계속 셉니다.';
+    return r + ' 법니다. 일을 시작할 때 시작을 누르세요.';
+  }
+  function syncButtons() {
+    var s = $('btn-start');
+    if (s) { s.disabled = !T.running && !cur; s.textContent = T.running ? '⏸ 잠깐 멈춤' : (T.bankMs > 0 ? '▶ 이어서' : '▶ 시작'); }
+    var r = $('btn-reset'); if (r) r.disabled = !T.running && T.bankMs === 0;
+    var f = $('btn-since'); if (f) f.disabled = !cur;
+    setText('tick-sub', subLine());
+  }
+  function run(fromMs) {
+    T.running = true; T.since = fromMs; T.rate = cur.b.sec;
+    clearInterval(T.timer); T.timer = setInterval(paint, 100);
+    paint(); syncButtons();
+  }
+  function pause() {
+    bankNow(); T.running = false; clearInterval(T.timer); T.timer = null;
+    paint(); syncButtons();
+  }
+  function reset() {
+    T.running = false; clearInterval(T.timer); T.timer = null; T.bank = 0; T.bankMs = 0; T.since = 0;
+    setText('tick-msg', ''); paint(); syncButtons();
+  }
+
+  /* ---------- results ---------- */
+  function setErr(m) { var e = $('err'); if (e) { e.textContent = m || ''; e.hidden = !m; } }
+  function fillBreakdown(b) {
+    KEYS.forEach(function (k) { setText('v-' + k, b ? won(b[k], (k === 'sec' || k === 'breath' || k === 'min') ? 2 : 0) : '–'); });
+    setText('ms', b ? '1,000원 버는 데 ' + dur(1000 / b.sec) + ' · 1만 원 ' + dur(10000 / b.sec) + ' · 10만 원 ' + dur(100000 / b.sec) : '');
+    ['btn-copy', 'btn-share'].forEach(function (id) { var el = $(id); if (el) el.disabled = !b; });
+  }
+  function renderItem() {
+    var v = val('item');
+    if (v === '') { setText('item-msg', ''); return; }
+    if (!cur) { setText('item-msg', '먼저 1단계에 급여를 넣어 주세요.'); return; }
+    var p = Number(v);
+    if (!isFinite(p) || p <= 0 || p > 1000000000000) { setText('item-msg', '값은 0원보다 크고 1조 원 이하로 넣어 주세요.'); return; }
+    var s = p / cur.b.sec;
+    setText('item-msg', s < 1 ? won(p, 0) + '은 1초 안에 법니다.' : won(p, 0) + '을 벌려면 약 ' + dur(s) + ' 일해야 합니다.');
+  }
+  function render() {
+    var x = readInputs(), msg = x.pay === null ? '' : validate(x);
+    setErr(msg);
+    var cb = $('copy-box'); if (cb) cb.hidden = true;
+    if (x.pay === null || msg) {
+      cur = null;
+      fillBreakdown(null);
+      syncButtons();
+      renderItem();
+      return;
     }
+    var b = breakdown(x);
+    if (T.running) { bankNow(); T.rate = b.sec; }
+    cur = { x: x, b: b };
+    fillBreakdown(b);
+    syncButtons();
+    renderItem();
+    paint();
+  }
 
-    // Slider
-    const slider = document.getElementById('salary-slider');
-    const salaryValText = document.getElementById('salary-val-text');
-    slider.addEventListener('input', (e) => {
-      salaryValText.textContent = `${e.target.value}만 원`;
-    });
+  /* ---------- toast · copy · share (Web Share -> clipboard -> visible text to copy by hand) ---------- */
+  var toastTimer = null;
+  function showToastNotification(m) {
+    var el = $('global-ux-toast'); if (!el) return;
+    el.textContent = m; el.classList.add('show');
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { el.classList.remove('show'); }, 2200);
+  }
+  var COPIED = '복사했습니다. 원하는 곳에 붙여 넣으세요.';
+  function copyFailed(text) {
+    var b = $('copy-box');
+    if (b) { b.value = text; b.hidden = false; b.focus(); b.select(); }
+    showToastNotification('복사하지 못했습니다. 아래 글을 직접 선택해 복사해 주세요.');
+  }
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea'); ta.value = text; ta.setAttribute('readonly', '');
+    ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select();
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) { ok = false; }
+    document.body.removeChild(ta);
+    if (ok) showToastNotification(COPIED); else copyFailed(text);
+  }
+  function copyText(text) {
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(text).then(function () { showToastNotification(COPIED); }, function () { fallbackCopy(text); });
+    } else { fallbackCopy(text); }
+  }
+  function params(x) {
+    var q = new URLSearchParams();
+    q.set('pay', String(x.pay)); q.set('per', x.per); q.set('mh', String(x.mh));
+    return q.toString();
+  }
+  function link() { return cur ? SITE + '/?' + params(cur.x) : SITE + '/'; }
+  function summary() {
+    if (!cur) return '';
+    var b = cur.b, x = cur.x, n = Date.now(), ms = onClock(n);
+    var lines = ['💵 세전 ' + PER_LABEL[x.per] + ' ' + fmtN(x.pay) + '원 기준',
+      '• 1초 ' + won(b.sec, 2) + ' · 숨 한 번(4초) ' + won(b.breath, 2),
+      '• 1분 ' + won(b.min, 2) + ' · 1시간 ' + won(b.hour, 0),
+      '• 하루 8시간 ' + won(b.day, 0) + ' · 1년 ' + won(b.year, 0),
+      '한 달 유급 ' + fmtN(x.mh) + '시간 기준 · 세금 빼기 전'];
+    if (T.running || T.bankMs > 0) lines.push('⏱️ ' + hms(ms) + ' 동안 ' + tickText(earned(n)) + ' (숨 ' + breaths(ms) + '번)');
+    lines.push('👉 ' + TOOL_NAME + ': ' + link());
+    return lines.join('\n');
+  }
 
-    function triggerVibe(pattern) {
-      try {
-        if (navigator.vibrate) navigator.vibrate(pattern);
-      } catch (e) {}
+  /* ---------- events ---------- */
+  ['pay', 'mh'].forEach(function (id) { on(id, 'input', render); });
+  on('per', 'change', render);
+  on('item', 'input', renderItem);
+  on('btn-start', 'click', function () {
+    if (T.running) { pause(); return; }
+    if (!cur) return;
+    setText('tick-msg', '');
+    run(Date.now());
+  });
+  on('btn-reset', 'click', reset);
+  on('btn-since', 'click', function () {
+    if (!cur) return;
+    var m = /^(\d{1,2}):(\d{2})/.exec(val('since'));
+    if (!m || +m[1] > 23 || +m[2] > 59) { setText('tick-msg', '출근한 시각을 골라 주세요.'); return; }
+    var n = Date.now(), d = new Date(n), y = false;
+    d.setHours(+m[1], +m[2], 0, 0);
+    if (d.getTime() > n) { d.setDate(d.getDate() - 1); y = true; }
+    reset();
+    run(d.getTime());
+    var t = d.toLocaleTimeString('ko-KR', { hour: 'numeric', minute: '2-digit' });
+    setText('tick-msg', y ? '오늘은 아직 그 시각이 되지 않아 어제 ' + t + '부터 셉니다.' : '오늘 ' + t + '부터 셉니다.');
+  });
+  on('btn-copy', 'click', function () { if (cur) copyText(summary()); });
+  on('btn-share', 'click', function () {
+    if (!cur) return;
+    var text = summary();
+    if (navigator.share) { navigator.share({ title: TOOL_NAME, text: text, url: link() }).catch(function (e) { if (!e || e.name !== 'AbortError') copyText(text); }); }
+    else { copyText(text); }
+  });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden) paint(); });
+
+  /* ---------- start: URL parameters -> defaults ---------- */
+  (function init() {
+    var q; try { q = new URLSearchParams(location.search); } catch (e) { q = null; }
+    var set = function (id, v) { var el = $(id); if (el && v !== null && v !== undefined) el.value = v; };
+    if (q) {
+      if (q.has('pay')) set('pay', q.get('pay'));
+      if (PER.indexOf(q.get('per')) >= 0) set('per', q.get('per'));
+      if (q.has('mh')) set('mh', q.get('mh'));
     }
-
-    const toggleBtn = document.getElementById('toggle-btn');
-    const toggleText = document.getElementById('toggle-text');
-    const counterEl = document.getElementById('wage-counter');
-    const timeEl = document.getElementById('time-ticker');
-    const progressBar = document.getElementById('progress-bar');
-    const progressLabel = document.getElementById('milestone-progress');
-    const snackStatus = document.getElementById('snack-status');
-    const receiptCard = document.getElementById('receipt-card');
-
-    let milestoneHit = { 5: false, 10: false, 15: false };
-
-    function update() {
-      const elapsedSec = (Date.now() - startTime) / 1000;
-      const salaryMan = parseInt(slider.value, 10) * 10000;
-      // Per sec: salary / 209 hours / 3600 sec
-      const perSec = salaryMan / 209 / 3600;
-      const accumulated = elapsedSec * perSec;
-
-      counterEl.innerHTML=`${accumulated.toFixed(2)}<span class="text-2xl text-emerald-600">원</span>`;
-      
-      const mm = String(Math.floor(elapsedSec / 60)).padStart(2, '0');
-      const ss = String(Math.floor(elapsedSec % 60)).padStart(2, '0');
-      timeEl.textContent = `체류 시간: ${mm}:${ss}`;
-
-      // Progress to 15s lock-in
-      const progress = Math.min(100, (elapsedSec / 15) * 100);
-      progressBar.style.width = `${progress}%`;
-      progressLabel.textContent = `${Math.min(15, Math.floor(elapsedSec))} / 15s`;
-
-      if (elapsedSec >= 5 && !milestoneHit[5]) {
-        milestoneHit[5] = true;
-        snackStatus.textContent = '달성: ☕ 자판기 율무차 1잔 획득!';
-        triggerVibe(15);
-      }
-      if (elapsedSec >= 10 && !milestoneHit[10]) {
-        milestoneHit[10] = true;
-        snackStatus.textContent = '달성: 🍭 막대사탕 1개 획득!';
-        triggerVibe(20);
-      }
-      if (elapsedSec >= 15 && !milestoneHit[15]) {
-        milestoneHit[15] = true;
-        snackStatus.textContent = '🎉 15초 완주! 정식 감열식 영수증 직인 해금';
-        triggerVibe([30, 50, 30]);
-      }
-    }
-
-    toggleBtn.addEventListener('click', () => {
-      if (!isRunning) {
-        // Start
-        isRunning = true;
-        startTime = Date.now();
-        milestoneHit = { 5: false, 10: false, 15: false };
-        receiptCard.classList.add('hidden');
-        toggleText.textContent = '정산 종료 (Receipt)';
-        toggleBtn.classList.replace('bg-emerald-500', 'bg-rose-500');
-        toggleBtn.classList.replace('hover:bg-emerald-400', 'hover:bg-rose-400');
-        playCashSound();
-        triggerVibe(25);
-        timerId = setInterval(update, 50);
-      } else {
-        // Stop
-        isRunning = false;
-        clearInterval(timerId);
-        toggleText.textContent = '다시 개시 (Restart)';
-        toggleBtn.classList.replace('bg-rose-500', 'bg-emerald-500');
-        toggleBtn.classList.replace('hover:bg-rose-400', 'hover:bg-emerald-400');
-
-        const elapsedSec = (Date.now() - startTime) / 1000;
-        const salaryMan = parseInt(slider.value, 10) * 10000;
-        const perSec = salaryMan / 209 / 3600;
-        const finalWage = elapsedSec * perSec;
-
-        // Render receipt
-        document.getElementById('receipt-date').textContent = new Date().toLocaleString('ko-KR');
-        document.getElementById('r-time').textContent = `${Math.floor(elapsedSec / 60)}분 ${Math.floor(elapsedSec % 60)}초`;
-        document.getElementById('r-wage').textContent = `${finalWage.toFixed(2)}원`;
-        
-        const coffeeCups = (finalWage / 2000).toFixed(1);
-        document.getElementById('r-snack').textContent = `메가커피 아메리카노 약 ${coffeeCups}잔 분량`;
-        
-        receiptCard.classList.remove('hidden');
-        playCashSound();
-      }
-    });
-
-    document.getElementById('reset-btn').addEventListener('click', () => {
-      isRunning = false;
-      clearInterval(timerId);
-      counterEl.innerHTML='0.00<span class="text-2xl text-emerald-600">원</span>';
-      timeEl.textContent = '체류 시간: 00:00';
-      progressBar.style.width = '0%';
-      progressLabel.textContent = '0 / 15s';
-      snackStatus.textContent = '현재 등가 보상: 숨쉬기 대기 중';
-      toggleText.textContent = '루팡 개시 (Start)';
-      toggleBtn.classList.replace('bg-rose-500', 'bg-emerald-500');
-      receiptCard.classList.add('hidden');
-    });
-
-    function showToast(msg) {
-      const toast = document.getElementById('toast');
-      toast.textContent = msg;
-      toast.style.opacity = '1';
-      setTimeout(() => { toast.style.opacity = '0'; }, 2200);
-    }
-
-    document.getElementById('copy-btn').addEventListener('click', () => {
-      const wage = document.getElementById('r-wage').textContent;
-      const time = document.getElementById('r-time').textContent;
-      const url = window.location.href;
-      const copyText = `오늘 변기 위에서 ${wage} 벌었습니다 (${time} 체류).\n팀장님, 제가 가만히 앉아 숨만 쉬어도 회사는 돈을 냅니다.\n👉 실시간 월급루팡 계산기: ${url}`;
-
-      if (navigator.clipboard && window.isSecureContext) {
-        navigator.clipboard.writeText(copyText).then(() => showToast('단톡방 카피가 복사되었습니다!'));
-      } else {
-        const ta = document.createElement('textarea');
-        ta.value = copyText;
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        document.body.removeChild(ta);
-        showToast('단톡방 카피가 복사되었습니다!');
-      }
-    });
-  </script>
+    render();
+    paint();
+  })();
+})();
+</script>
+<!-- LOGIC END -->
 </body>
 </html>
