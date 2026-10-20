@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>호흡당 급여 카운터 : 월급루팡 실시간 급여 타이머</title>
-<meta name="description" content="세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분, 1시간 단위 금액으로 바꾸고, 일하는 동안 쌓이는 돈을 실시간으로 셉니다.">
+<meta name="description" content="세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분 단위 금액으로 바꾸고, 일하는 동안 쌓이는 돈을 실시간으로 셉니다.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://breath-to-wage-counter.enjoy-onepage.com/">
 <meta name="theme-color" content="#0f766e">
@@ -13,12 +13,12 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="호흡당 급여 카운터">
 <meta property="og:title" content="호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급">
-<meta property="og:description" content="세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분, 1시간 단위 금액으로 바꾸고, 일하는 동안 쌓이는 돈을 실시간으로 셉니다.">
+<meta property="og:description" content="세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분 단위 금액으로 바꾸고, 일하는 동안 쌓이는 돈을 실시간으로 셉니다.">
 <meta property="og:url" content="https://breath-to-wage-counter.enjoy-onepage.com/">
 <meta property="og:image" content="https://breath-to-wage-counter.enjoy-onepage.com/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="호흡당 급여 카운터: 숨 쉴 때마다 벌리는 실시간 시급">
-<meta name="twitter:description" content="세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분, 1시간 단위 금액으로 바꾸고, 일하는 동안 쌓이는 돈을 실시간으로 셉니다.">
+<meta name="twitter:description" content="세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분 단위 금액으로 바꾸고, 일하는 동안 쌓이는 돈을 실시간으로 셉니다.">
 <meta name="twitter:image" content="https://breath-to-wage-counter.enjoy-onepage.com/og-image.png">
 <link rel="alternate" type="application/rss+xml" title="호흡당 급여 카운터 RSS" href="https://breath-to-wage-counter.enjoy-onepage.com/rss.xml">
 <link rel="sitemap" type="application/xml" href="https://breath-to-wage-counter.enjoy-onepage.com/sitemap.xml">
@@ -34,7 +34,7 @@
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "All",
       "inLanguage": "ko",
-      "description": "세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분, 1시간, 하루, 한 달, 1년 단위 금액으로 바꾸고, 일하는 동안 쌓이는 급여를 기기 시계로 실시간으로 세는 무료 도구입니다.",
+      "description": "세전 월급·연봉·시급을 1초, 숨 한 번(4초), 1분 단위 금액으로 바꾸고, 일하는 동안 쌓이는 급여를 기기 시계로 실시간으로 세는 무료 도구입니다.",
       "image": "https://breath-to-wage-counter.enjoy-onepage.com/og-image.png",
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "KRW" }
     },
@@ -45,13 +45,9 @@
         { "@type": "Question", "name": "1초에 얼마를 버는지 어떻게 계산하나요?",
           "acceptedAnswer": { "@type": "Answer", "text": "시급을 1시간의 초 수인 3,600으로 나눕니다. 월급이면 먼저 한 달 유급 시간(기본 209시간)으로 나눠 시급을 구합니다. 예를 들어 세전 월급 300만 원은 시급 약 14,354원, 1초에 약 3.99원, 숨 한 번(4초)에 약 15.95원입니다." } },
         { "@type": "Question", "name": "209시간은 어디서 나온 숫자인가요?",
-          "acceptedAnswer": { "@type": "Answer", "text": "주 40시간 일하고 주휴 8시간을 받는 경우를 한 달로 나눈 값입니다. 1주 48시간 × 365일 ÷ 7일 ÷ 12개월 ≈ 208.6시간을 올림했습니다. 근무 시간이 다르거나 주휴가 없으면 한 달 유급 시간을 바꿔 넣으세요." } },
+          "acceptedAnswer": { "@type": "Answer", "text": "주 40시간 일하고 주휴 8시간을 받는 경우를 한 달로 나눈 값입니다. 1주 48시간 × 365일 ÷ 7일 ÷ 12개월 ≈ 208.6시간을 올림했습니다." } },
         { "@type": "Question", "name": "세금을 뗀 금액인가요?",
-          "acceptedAnswer": { "@type": "Answer", "text": "아니요, 세전 금액입니다. 입력한 급여에서 세금과 4대 보험료를 빼기 전 금액으로 계산하므로 실제로 통장에 들어오는 돈은 이보다 적습니다." } },
-        { "@type": "Question", "name": "쉬는 시간이나 이미 시작한 근무도 셀 수 있나요?",
-          "acceptedAnswer": { "@type": "Answer", "text": "쉬는 시간에는 잠깐 멈춤을 누르고, 돌아오면 이어서를 누르세요. 시작을 누르지 못했다면 출근한 시각을 넣고 '이 시각부터 세기'를 누르면 그 시각부터 셉니다. 급여를 바꾸면 이미 쌓인 금액은 그대로 두고 그때부터 새 금액으로 셉니다." } },
-        { "@type": "Question", "name": "급여가 저장되거나 어디로 보내지나요?",
-          "acceptedAnswer": { "@type": "Answer", "text": "아니요. 계산은 이 브라우저 안에서만 하고 아무것도 저장하지 않아, 페이지를 닫으면 사라집니다. 결과 복사나 공유하기를 누를 때만 급여가 링크 주소에 들어가며, 그 링크를 연 사람은 같은 결과를 봅니다." } }
+          "acceptedAnswer": { "@type": "Answer", "text": "아니요, 세전 금액입니다. 세금과 4대 보험료를 빼기 전 금액으로 계산하므로 실수령액은 이보다 적습니다." } }
       ]
     }
   ]
@@ -61,7 +57,6 @@
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2228289204702106" crossorigin="anonymous"></script>
 <!-- ADSENSE END: loader -->
 <script id="math-guard">
-// Global Math & DOM Output Guard
 (function() {
   const origToLocaleString = Number.prototype.toLocaleString;
   Number.prototype.toLocaleString = function(locales, options) {
@@ -81,16 +76,10 @@
     --primary-hover: #115e59;
     --primary-light: #f0fdfa;
     --primary-border: #99f6e4;
-    --accent: #14b8a6;
     --text-main: #0f172a;
-    --text-sub: #475569;
     --text-muted: #64748b;
     --bg-page: #f8fafc;
-    --bg-card: #ffffff;
     --border-card: #e2e8f0;
-    --receipt-bg: #f8fafc;
-    --receipt-border: #cbd5e1;
-    --danger: #ef4444;
   }
 
   *, *::before, *::after {
@@ -111,13 +100,12 @@
     overflow-wrap: anywhere;
   }
 
-  /* Focus accessibility */
   :focus-visible {
     outline: 2px solid var(--primary) !important;
     outline-offset: 2px !important;
   }
 
-  /* Global Top Navigation Bar */
+  /* Header */
   .site-header {
     background: #ffffff;
     border-bottom: 1px solid var(--border-card);
@@ -127,7 +115,7 @@
     width: 100%;
   }
   .header-inner {
-    max-width: 1040px;
+    max-width: 640px;
     margin: 0 auto;
     padding: 0.75rem 1rem;
     display: flex;
@@ -144,55 +132,29 @@
     font-size: 1.05rem;
   }
   .brand-badge {
-    width: 32px;
-    height: 32px;
-    border-radius: 9px;
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
     background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
-    box-shadow: 0 2px 6px rgba(15, 118, 110, 0.3);
-  }
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-muted);
-  }
-  .nav-links a {
-    text-decoration: none;
-    color: inherit;
-    transition: color 0.15s;
-  }
-  .nav-links a:hover {
-    color: var(--primary);
+    font-size: 0.95rem;
   }
 
-  /* Main Container */
+  /* Container */
   .main-wrap {
     width: 100%;
-    max-width: 1040px;
+    max-width: 640px;
     margin: 0 auto;
     padding: 1rem 0.85rem 3rem;
   }
-  @media (max-width: 640px) {
-    .main-wrap {
-      padding: 0.75rem 0.5rem 2rem;
-    }
-  }
 
-  /* Hero Banner */
+  /* Hero */
   .hero-section {
-    background: #ffffff;
-    border: 1px solid var(--border-card);
-    border-radius: 18px;
-    padding: 1.25rem 1.5rem;
-    margin-bottom: 1.25rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    text-align: center;
+    padding: 1rem 0.5rem 1.25rem;
   }
   .hero-badge {
     display: inline-flex;
@@ -202,208 +164,138 @@
     border-radius: 9999px;
     background: var(--primary-light);
     color: var(--primary);
-    font-size: 0.725rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 0.45rem;
   }
   .hero-title {
-    font-size: 1.45rem;
-    font-weight: 800;
+    font-size: 1.5rem;
+    font-weight: 900;
     color: var(--text-main);
     letter-spacing: -0.025em;
-    line-height: 1.35;
+    line-height: 1.3;
   }
   .hero-desc {
-    font-size: 0.825rem;
+    font-size: 0.85rem;
     color: var(--text-muted);
     margin-top: 0.35rem;
-    line-height: 1.5;
-  }
-  @media (max-width: 640px) {
-    .hero-section {
-      padding: 1rem;
-      border-radius: 14px;
-    }
-    .hero-title {
-      font-size: 1.225rem;
-    }
   }
 
-  /* Two-Column Layout Grid */
-  .app-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 1.25rem;
-    align-items: start;
-    width: 100%;
-  }
-  @media (max-width: 900px) {
-    .app-grid {
-      grid-template-columns: minmax(0, 1fr);
-      gap: 1rem;
-    }
-  }
-
-  /* Card Containers */
-  .panel-card {
+  /* Input Card (Simple & Focused) */
+  .input-card {
     background: #ffffff;
     border: 1px solid var(--border-card);
     border-radius: 18px;
-    padding: 1.35rem;
+    padding: 1.25rem;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    margin-bottom: 1rem;
     width: 100%;
-    min-width: 0;
   }
-  .panel-header {
+  .input-header-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.15rem;
-    padding-bottom: 0.65rem;
-    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 0.6rem;
   }
-  .panel-title {
-    font-size: 1.05rem;
+  .input-title {
+    font-size: 0.875rem;
     font-weight: 800;
-    color: var(--text-main);
-    display: flex;
-    align-items: center;
-    gap: 0.45rem;
+    color: #334155;
   }
-  .panel-tag {
-    font-size: 0.7rem;
-    font-weight: 600;
+  .per-selector {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 700;
     color: var(--primary);
     background: var(--primary-light);
-    padding: 2px 8px;
+    border: 1px solid var(--primary-border);
     border-radius: 6px;
+    cursor: pointer;
   }
-
-  /* Form Elements */
-  .form-group {
-    margin-bottom: 1rem;
-    width: 100%;
-    min-width: 0;
-  }
-  .form-label {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: #334155;
-    margin-bottom: 0.35rem;
-  }
-  .input-wrap {
+  .input-group {
     position: relative;
     display: flex;
     align-items: center;
     width: 100%;
   }
-  .form-input, .form-select {
+  .main-input {
     width: 100%;
-    min-width: 0;
-    height: 44px;
-    padding: 0 2.25rem 0 0.85rem;
-    font-size: 0.925rem;
-    font-weight: 700;
+    height: 48px;
+    padding: 0 2.5rem 0 0.95rem;
+    font-size: 1.15rem;
+    font-weight: 800;
     color: var(--text-main);
     background: #f8fafc;
-    border: 1px solid var(--border-card);
-    border-radius: 10px;
-    transition: all 0.15s;
+    border: 1.5px solid var(--border-card);
+    border-radius: 12px;
     font-family: inherit;
+    transition: all 0.15s;
   }
-  .form-select {
-    padding-right: 1.5rem;
-    cursor: pointer;
-  }
-  .form-input:focus, .form-select:focus {
+  .main-input:focus {
     background: #ffffff;
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.15);
   }
   .input-unit {
     position: absolute;
-    right: 0.85rem;
-    font-size: 0.825rem;
+    right: 0.95rem;
+    font-size: 0.875rem;
     font-weight: 700;
     color: var(--text-muted);
-    pointer-events: none;
   }
 
-  /* Quick Presets Chips */
-  .preset-scroll {
+  /* Presets */
+  .presets-row {
     display: flex;
     gap: 0.35rem;
-    margin-top: 0.45rem;
+    margin-top: 0.5rem;
     overflow-x: auto;
     padding-bottom: 0.2rem;
     -webkit-overflow-scrolling: touch;
   }
-  .preset-chip {
+  .preset-btn {
     flex: 0 0 auto;
-    font-size: 0.725rem;
+    font-size: 0.75rem;
     font-weight: 700;
-    padding: 0.25rem 0.65rem;
+    padding: 0.3rem 0.65rem;
     border-radius: 8px;
     background: #f1f5f9;
     color: #475569;
-    border: 1px solid transparent;
+    border: none;
     cursor: pointer;
     transition: all 0.15s;
-    min-height: 30px;
-    display: inline-flex;
-    align-items: center;
   }
-  .preset-chip:hover {
+  .preset-btn:hover {
     background: var(--primary-light);
     color: var(--primary);
-    border-color: var(--primary-border);
   }
 
-  .hint-text {
-    font-size: 0.725rem;
-    color: var(--text-muted);
-    margin-top: 0.35rem;
-    line-height: 1.4;
-  }
-
-  /* Error Alert */
-  .error-box {
-    background: #fef2f2;
-    border: 1px solid #fecaca;
-    color: var(--danger);
-    font-size: 0.75rem;
-    font-weight: 600;
-    padding: 0.5rem 0.75rem;
-    border-radius: 8px;
-    margin-top: 0.5rem;
-  }
-
-  /* Real-time Ticker Display Box */
-  .live-counter-box {
-    background: linear-gradient(135deg, #115e59 0%, #0f766e 100%);
-    border-radius: 16px;
-    padding: 1.25rem;
+  /* Main Stage: Live Digital Counter */
+  .counter-stage {
+    background: linear-gradient(140deg, #115e59 0%, #0f766e 100%);
+    border-radius: 20px;
+    padding: 1.65rem 1.25rem;
     color: #ffffff;
-    box-shadow: 0 6px 20px rgba(15, 118, 110, 0.25);
-    margin-bottom: 1rem;
     text-align: center;
+    box-shadow: 0 8px 24px rgba(15, 118, 110, 0.28);
     position: relative;
     overflow: hidden;
+    margin-bottom: 1rem;
+    width: 100%;
   }
-  .live-badge {
+  .counter-pulse-wrap {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    font-size: 0.7rem;
+    gap: 0.4rem;
+    font-size: 0.725rem;
     font-weight: 800;
-    background: rgba(255, 255, 255, 0.18);
-    padding: 2px 8px;
+    background: rgba(255, 255, 255, 0.16);
+    padding: 3px 10px;
     border-radius: 9999px;
-    margin-bottom: 0.5rem;
-    letter-spacing: 0.03em;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.02em;
   }
-  .live-pulse {
+  .pulse-dot {
     width: 8px;
     height: 8px;
     border-radius: 50%;
@@ -415,48 +307,87 @@
     0%, 100% { transform: scale(1); opacity: 1; }
     50% { transform: scale(1.3); opacity: 0.6; }
   }
-  .live-amount {
+
+  /* Big Bold Numeric Output */
+  .counter-value-wrap {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-    font-size: 2.25rem;
+    font-size: 2.75rem;
     font-weight: 900;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.04em;
     line-height: 1.1;
-    margin: 0.35rem 0;
+    margin: 0.25rem 0 0.45rem;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 2px;
   }
-  .live-amount-sub {
-    font-size: 0.775rem;
-    color: #ccfbf1;
-    margin-bottom: 0.5rem;
+  .counter-val-int {
+    color: #ffffff;
   }
-  .live-stats-row {
+  .counter-val-frac {
+    font-size: 1.45rem;
+    color: #99f6e4;
+    font-weight: 700;
+  }
+  .counter-unit {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #a7f3d0;
+    margin-left: 2px;
+  }
+  @media (max-width: 400px) {
+    .counter-value-wrap {
+      font-size: 2.3rem;
+    }
+    .counter-val-frac {
+      font-size: 1.2rem;
+    }
+  }
+
+  /* Live Clock & Breaths stats */
+  .counter-stats-bar {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.75rem;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 600;
-    color: #99f6e4;
-    padding-top: 0.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-  }
-  @media (max-width: 480px) {
-    .live-amount {
-      font-size: 1.85rem;
-    }
+    color: #ccfbf1;
+    margin-bottom: 0.85rem;
   }
 
-  /* Control Action Buttons */
-  .controls-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  /* Unit Rate Chips */
+  .rate-chips-row {
+    display: flex;
+    justify-content: center;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+  }
+  .rate-chip {
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  .rate-chip span {
+    color: #5eead4;
+  }
+
+  /* Counter Controls (Start / Reset / 09:00 Attendance) */
+  .controls-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 0.5rem;
+    margin-bottom: 0.65rem;
     width: 100%;
   }
-  .control-btn {
-    height: 44px;
-    border-radius: 10px;
-    font-size: 0.825rem;
+  .ctl-btn {
+    height: 46px;
+    border-radius: 12px;
+    font-size: 0.875rem;
     font-weight: 800;
     cursor: pointer;
     display: inline-flex;
@@ -464,260 +395,56 @@
     justify-content: center;
     gap: 0.4rem;
     transition: all 0.15s;
-    border: 1px solid transparent;
+    border: none;
     font-family: inherit;
     white-space: nowrap;
-    word-break: keep-all;
   }
-  .btn-start-run {
+  .ctl-btn-play {
     background: var(--primary);
     color: #ffffff;
   }
-  .btn-start-run:hover {
+  .ctl-btn-play:hover {
     background: var(--primary-hover);
   }
-  .btn-start-run.running {
-    background: #f59e0b;
-    color: #ffffff;
+  .ctl-btn-play.running {
+    background: #d97706;
   }
-  .btn-reset-run {
-    background: #f1f5f9;
+  .ctl-btn-reset {
+    background: #ffffff;
     color: #475569;
-    border-color: var(--border-card);
+    border: 1px solid var(--border-card);
   }
-  .btn-reset-run:hover {
-    background: #e2e8f0;
+  .ctl-btn-reset:hover {
+    background: #f1f5f9;
   }
 
-  /* Attendance Time Picker Box */
-  .since-box {
-    background: #f8fafc;
-    border: 1px solid var(--border-card);
-    border-radius: 12px;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
+  /* One-click 09:00 Attendance Toggle */
+  .attendance-toggle-btn {
     width: 100%;
-  }
-  .since-label {
-    font-size: 0.725rem;
-    font-weight: 700;
-    color: #475569;
-    margin-bottom: 0.35rem;
-  }
-  .since-input-row {
-    display: flex;
-    gap: 0.4rem;
-    align-items: center;
-  }
-  .since-input {
-    flex: 1 1 auto;
-    min-width: 0;
-    height: 38px;
-    padding: 0 0.5rem;
-    border: 1px solid var(--border-card);
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 700;
+    padding: 0.55rem;
     background: #ffffff;
-  }
-  .btn-since-apply {
-    flex: 0 0 auto;
-    height: 38px;
-    padding: 0 0.85rem;
+    border: 1px dashed var(--border-card);
+    border-radius: 10px;
     font-size: 0.75rem;
     font-weight: 700;
-    background: #e2e8f0;
-    color: #1e293b;
-    border: none;
-    border-radius: 8px;
+    color: #475569;
     cursor: pointer;
-    white-space: nowrap;
-  }
-  .btn-since-apply:hover {
-    background: #cbd5e1;
-  }
-
-  /* Viral Lupang Activities Grid */
-  .lupang-box {
-    background: #f0fdfa;
-    border: 1px solid var(--primary-border);
-    border-radius: 14px;
-    padding: 0.85rem;
-    margin-bottom: 1rem;
-    width: 100%;
-  }
-  .lupang-header {
-    font-size: 0.8rem;
-    font-weight: 800;
-    color: var(--primary);
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 0.35rem;
-    margin-bottom: 0.5rem;
+    transition: all 0.15s;
+    margin-bottom: 1rem;
   }
-  .lupang-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.4rem;
-  }
-  .lupang-card {
-    background: #ffffff;
-    border: 1px solid #ccfbf1;
-    border-radius: 10px;
-    padding: 0.6rem 0.4rem;
-    text-align: center;
-  }
-  .lupang-icon {
-    font-size: 1.15rem;
-    display: block;
-    margin-bottom: 0.15rem;
-  }
-  .lupang-card-title {
-    font-size: 0.675rem;
-    font-weight: 700;
-    color: #475569;
-  }
-  .lupang-card-val {
-    font-size: 0.775rem;
-    font-weight: 800;
+  .attendance-toggle-btn:hover {
+    border-color: var(--primary);
     color: var(--primary);
-    margin-top: 0.15rem;
-    white-space: nowrap;
-  }
-
-  /* Breakdown Table */
-  .breakdown-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 0.5rem;
-  }
-  .breakdown-table th, .breakdown-table td {
-    padding: 0.45rem 0.2rem;
-    font-size: 0.8rem;
-    border-bottom: 1px solid #f1f5f9;
-  }
-  .breakdown-table th {
-    text-align: left;
-    font-weight: 700;
-    color: #475569;
-  }
-  .breakdown-table td {
-    text-align: right;
-    font-weight: 800;
-    color: var(--text-main);
-    font-variant-numeric: tabular-nums;
-  }
-  .breakdown-table tr.highlight th {
-    color: var(--primary);
-  }
-  .breakdown-table tr.highlight td {
-    color: var(--primary);
-    font-size: 0.85rem;
-  }
-
-  /* Wishlist Item Wage Conversion Box */
-  .wishlist-box {
-    margin-top: 1rem;
-    padding: 0.85rem;
-    background: #f8fafc;
-    border: 1px solid var(--border-card);
-    border-radius: 12px;
-    width: 100%;
-  }
-  .wishlist-label {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #334155;
-    margin-bottom: 0.35rem;
-  }
-  .wishlist-msg {
-    margin-top: 0.35rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--primary);
-    min-height: 1.2em;
-  }
-
-  /* Statement Receipt Container */
-  .receipt-card {
-    background: var(--receipt-bg);
-    border: 1.5px solid var(--receipt-border);
-    border-radius: 16px;
-    padding: 1.25rem 1.15rem;
-    position: relative;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
-    width: 100%;
-    min-width: 0;
-  }
-  .receipt-card::before {
-    content: "";
-    position: absolute;
-    top: -9px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 18px;
-    height: 18px;
-    background: var(--bg-page);
-    border-radius: 50%;
-    border: 1.5px solid var(--receipt-border);
-    border-top-color: transparent;
-  }
-  .receipt-header {
-    text-align: center;
-    border-bottom: 2px dashed #cbd5e1;
-    padding-bottom: 0.75rem;
-    margin-bottom: 0.85rem;
-    width: 100%;
-  }
-  .receipt-title {
-    font-size: 0.95rem;
-    font-weight: 900;
-    letter-spacing: 0.04em;
-    color: var(--text-main);
-    white-space: nowrap;
-  }
-  .receipt-sub {
-    font-size: 0.7rem;
-    color: var(--text-muted);
-    margin-top: 0.2rem;
-  }
-  .receipt-badge {
-    display: inline-block;
-    font-size: 0.65rem;
-    font-weight: 800;
-    color: #047857;
-    background: #d1fae5;
-    padding: 2px 7px;
-    border-radius: 4px;
-    margin-top: 0.25rem;
-  }
-
-  /* Barcode Graphic */
-  .barcode-wrap {
-    margin: 1rem 0 0.85rem;
-    text-align: center;
-    color: #334155;
-    width: 100%;
-    overflow: hidden;
-  }
-  .barcode-svg {
-    max-width: 180px;
-    width: 100%;
-    height: 34px;
-    margin: 0 auto;
-    display: block;
-  }
-  .barcode-text {
-    font-family: ui-monospace, SFMono-Regular, monospace;
-    font-size: 0.625rem;
-    letter-spacing: 0.15em;
-    color: #64748b;
-    margin-top: 0.25rem;
+    background: var(--primary-light);
   }
 
   /* SMART 2-TIER ACTION TOOLBAR (Strict User Standard) */
   .action-toolbar {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
@@ -755,18 +482,18 @@
     background: linear-gradient(135deg, #0f766e 0%, #115e59 100%);
   }
   .toolbar-btn.secondary {
-    background: #f1f5f9;
+    background: #ffffff;
     color: #334155;
-    border-color: var(--border-card);
+    border: 1px solid var(--border-card);
     flex: 1 1 50%;
   }
   .toolbar-btn.secondary:hover {
-    background: #e2e8f0;
+    background: #f1f5f9;
   }
   .toolbar-btn.outline {
     background: #ffffff;
     color: var(--primary);
-    border-color: var(--primary-border);
+    border: 1px solid var(--primary-border);
     flex: 1 1 50%;
   }
   .toolbar-btn.outline:hover {
@@ -775,7 +502,7 @@
 
   /* AdSense Slots Container */
   .ad-box {
-    max-width: 1080px;
+    max-width: 640px;
     margin: 1.25rem auto;
     text-align: center;
     overflow: hidden;
@@ -788,41 +515,40 @@
     min-height: 280px !important;
   }
 
-  /* Related Tools & Workplace Cluster */
+  /* Related Tools Grid */
   .utilities-section {
     background: #ffffff;
     border: 1px solid var(--border-card);
-    border-radius: 18px;
-    padding: 1.35rem;
+    border-radius: 16px;
+    padding: 1.15rem;
     margin-top: 1.5rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
     width: 100%;
   }
   .utilities-title {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 800;
     color: var(--text-main);
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.75rem;
     display: flex;
     align-items: center;
     gap: 0.35rem;
   }
   .utilities-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
     width: 100%;
   }
-  @media (max-width: 720px) {
+  @media (max-width: 480px) {
     .utilities-grid {
-      grid-template-columns: minmax(0, 1fr);
+      grid-template-columns: 1fr;
     }
   }
   .utility-card {
     background: #f8fafc;
     border: 1px solid var(--border-card);
-    border-radius: 12px;
-    padding: 0.85rem;
+    border-radius: 10px;
+    padding: 0.65rem 0.75rem;
     text-decoration: none;
     display: flex;
     justify-content: space-between;
@@ -833,62 +559,44 @@
     border-color: var(--primary);
     background: var(--primary-light);
   }
-  .utility-tag {
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.2rem;
-  }
   .utility-name {
-    font-size: 0.8rem;
+    font-size: 0.775rem;
     font-weight: 800;
     color: #1e293b;
   }
   .utility-arrow {
     color: #94a3b8;
-    font-weight: 700;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 
-  /* Educational & FAQ Section */
-  .info-section {
+  /* FAQ Accordion */
+  .faq-section {
     background: #ffffff;
     border: 1px solid var(--border-card);
-    border-radius: 18px;
-    padding: 1.35rem;
-    margin-top: 1.5rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+    border-radius: 16px;
+    padding: 1.15rem;
+    margin-top: 1rem;
+    width: 100%;
   }
-  .info-title {
-    font-size: 1rem;
+  .faq-title {
+    font-size: 0.9rem;
     font-weight: 800;
     color: var(--text-main);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.65rem;
   }
-  .info-list {
-    padding-left: 1.25rem;
-    font-size: 0.8rem;
-    color: #475569;
-    line-height: 1.6;
-  }
-  .info-list li {
-    margin-bottom: 0.4rem;
-  }
-
   .faq-list {
     display: flex;
     flex-direction: column;
-    gap: 0.65rem;
-    margin-top: 0.5rem;
+    gap: 0.5rem;
   }
   .faq-item {
     border: 1px solid var(--border-card);
-    border-radius: 12px;
-    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    padding: 0.75rem 0.85rem;
     background: #ffffff;
   }
   .faq-question {
-    font-size: 0.825rem;
+    font-size: 0.8rem;
     font-weight: 800;
     color: var(--text-main);
     cursor: pointer;
@@ -896,32 +604,23 @@
     justify-content: space-between;
     align-items: center;
   }
-  .faq-chevron {
-    width: 16px;
-    height: 16px;
-    color: #94a3b8;
-    transition: transform 0.2s;
-  }
-  .faq-item[open] .faq-chevron {
-    transform: rotate(180deg);
-  }
   .faq-answer {
-    font-size: 0.775rem;
+    font-size: 0.75rem;
     color: #64748b;
-    margin-top: 0.55rem;
-    line-height: 1.6;
+    margin-top: 0.45rem;
+    line-height: 1.5;
   }
 
   .disclaimer-box {
-    margin-top: 1.5rem;
-    padding: 0.75rem 1rem;
+    margin-top: 1.25rem;
+    padding: 0.65rem 0.85rem;
     background: #f8fafc;
     border: 1px solid var(--border-card);
     border-radius: 10px;
-    font-size: 0.725rem;
+    font-size: 0.7rem;
     color: var(--text-muted);
     text-align: center;
-    line-height: 1.5;
+    line-height: 1.4;
   }
 
   /* Footer */
@@ -929,32 +628,24 @@
     background: #ffffff;
     border-top: 1px solid var(--border-card);
     margin-top: 2rem;
-    padding: 1.5rem 1rem;
-    font-size: 0.75rem;
+    padding: 1.25rem 1rem;
+    font-size: 0.725rem;
     color: var(--text-muted);
-    width: 100%;
-  }
-  .footer-inner {
-    max-width: 1040px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    text-align: center;
   }
   .footer-nav {
     display: flex;
+    justify-content: center;
     gap: 1rem;
+    margin-bottom: 0.45rem;
     font-weight: 600;
   }
   .footer-nav a {
     color: inherit;
     text-decoration: none;
   }
-  .footer-nav a:hover {
-    color: var(--primary);
-  }
 
-  /* Global Toast Message */
+  /* Toast Notification */
   .toast {
     position: fixed;
     bottom: 24px;
@@ -988,11 +679,7 @@
         <div class="brand-badge">⏱️</div>
         <span>호흡당 급여 카운터</span>
       </a>
-      <nav class="nav-links">
-        <a href="#calculator">카운터</a>
-        <a href="#how-it-works">원리</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+      <span style="font-size: 0.75rem; font-weight: 700; color: var(--primary);">실시간 월급루팡 타이머</span>
     </div>
   </header>
 
@@ -1013,225 +700,109 @@
     <section class="hero-section">
       <div class="hero-badge">
         <span>💸</span>
-        <span>2026 직장인 실시간 월급루팡 타이머</span>
+        <span>숨만 쉬어도 돈 버는 실시간 타이머</span>
       </div>
-      <h1 class="hero-title">숨 쉴 때마다 실시간으로 불어나는 내 급여</h1>
-      <p class="hero-desc">
-        세전 월급·연봉·시급을 입력하면 1초, 숨 한 번(4초), 1분 단위 수익을 실시간으로 카운트합니다.<br>
-        출근 시각을 설정하고 오늘 일하며 번 돈과 공식 루팡 명세서를 확인해 보세요!
-      </p>
+      <h1 class="hero-title">실시간 급여 카운터</h1>
+      <p class="hero-desc">내 급여를 넣고 시작을 누르면 초 단위로 쌓이는 돈을 실시간으로 셉니다.</p>
     </section>
 
-    <!-- Two-Column Interactive Grid -->
-    <div class="app-grid" id="calculator">
-      <!-- Left Panel: Input Configuration -->
-      <section class="panel-card" aria-labelledby="input-title">
-        <div class="panel-header">
-          <h2 class="panel-title" id="input-title">
-            <span>⚙️</span>
-            <span>1. 내 급여 정보 설정</span>
-          </h2>
-          <span class="panel-tag">세전 기준</span>
-        </div>
+    <!-- 1. Focused Input Card -->
+    <section class="input-card">
+      <div class="input-header-row">
+        <span class="input-title">내 세전 급여 입력</span>
+        <select class="per-selector" id="per">
+          <option value="month" selected>월급 기준</option>
+          <option value="year">연봉 기준</option>
+          <option value="hour">시급 기준</option>
+        </select>
+      </div>
 
-        <!-- Pay Criteria & Amount -->
-        <div class="form-group">
-          <label class="form-label" for="per">급여 기준 선택</label>
-          <div class="input-wrap">
-            <select class="form-select" id="per">
-              <option value="month" selected>월급 기준</option>
-              <option value="year">연봉 기준</option>
-              <option value="hour">시급 기준</option>
-            </select>
-          </div>
-        </div>
+      <div class="input-group">
+        <input class="main-input" id="pay" type="number" inputmode="numeric" min="0" placeholder="예: 3000000" value="3000000">
+        <span class="input-unit">원</span>
+      </div>
 
-        <div class="form-group">
-          <label class="form-label" for="pay" id="payLabel">세전 월급 (원)</label>
-          <div class="input-wrap">
-            <input class="form-input" id="pay" type="number" inputmode="numeric" min="0" step="any" placeholder="예: 3000000" value="3000000">
-            <span class="input-unit">원</span>
-          </div>
-          <!-- Quick Preset Chips -->
-          <div class="preset-scroll">
-            <button class="preset-chip" type="button" onclick="setPresetPay(2500000)">250만</button>
-            <button class="preset-chip" type="button" onclick="setPresetPay(3000000)">300만</button>
-            <button class="preset-chip" type="button" onclick="setPresetPay(3500000)">350만</button>
-            <button class="preset-chip" type="button" onclick="setPresetPay(4000000)">400만</button>
-            <button class="preset-chip" type="button" onclick="setPresetPay(5000000)">500만</button>
-            <button class="preset-chip" type="button" onclick="setPresetPay(100000000, 'year')">연봉 1억</button>
-          </div>
-        </div>
+      <!-- Quick Preset Chips -->
+      <div class="presets-row">
+        <button class="preset-btn" type="button" onclick="setPresetPay(2500000)">250만</button>
+        <button class="preset-btn" type="button" onclick="setPresetPay(3000000)">300만</button>
+        <button class="preset-btn" type="button" onclick="setPresetPay(3500000)">350만</button>
+        <button class="preset-btn" type="button" onclick="setPresetPay(4000000)">400만</button>
+        <button class="preset-btn" type="button" onclick="setPresetPay(5000000)">500만</button>
+        <button class="preset-btn" type="button" onclick="setPresetPay(100000000, 'year')">연봉 1억</button>
+      </div>
+    </section>
 
-        <div class="form-group">
-          <label class="form-label" for="mh">한 달 유급 근로 시간</label>
-          <div class="input-wrap">
-            <input class="form-input" id="mh" type="number" inputmode="decimal" min="1" max="744" step="any" value="209">
-            <span class="input-unit">시간</span>
-          </div>
-          <p class="hint-text">
-            주 40시간 + 주휴 8시간 포함 시 기본 209시간입니다 ((40+8) × 365 ÷ 7 ÷ 12 ≈ 208.6 올림).
-          </p>
-        </div>
+    <!-- 2. Main Stage: Real-time Live Digital Counter -->
+    <section class="counter-stage">
+      <div class="counter-pulse-wrap">
+        <span class="pulse-dot"></span>
+        <span id="tickerStatusText">실시간 카운트 중</span>
+      </div>
 
-        <div id="err" class="error-box" role="alert" style="display: none;"></div>
+      <!-- Big Numeric Value -->
+      <div class="counter-value-wrap">
+        <span class="counter-val-int" id="tick-i">0</span>
+        <span class="counter-val-frac" id="tick-f">.00</span>
+        <span class="counter-unit">원</span>
+      </div>
 
-        <!-- Wishlist Calculator -->
-        <div class="wishlist-box">
-          <label class="wishlist-label" for="item">☕ 사고 싶은 물건 값 (루팡 노동 환산기)</label>
-          <div class="input-wrap">
-            <input class="form-input" id="item" type="number" inputmode="numeric" min="0" placeholder="예: 4500 (스타벅스 아메리카노)" style="height: 38px;">
-            <span class="input-unit">원</span>
-          </div>
-          <div class="wishlist-msg" id="item-msg"></div>
-        </div>
-      </section>
+      <!-- Clock & Breaths -->
+      <div class="counter-stats-bar">
+        <span id="statTime">⏱️ 00:00:00</span>
+        <span>·</span>
+        <span id="statBreaths">💨 숨 0회</span>
+      </div>
 
-      <!-- Right Panel: Live Counter & Statement -->
-      <section class="receipt-card" aria-labelledby="receipt-heading">
-        <div class="receipt-header">
-          <div class="receipt-title">OFFICE LUPANG PAYSLIP</div>
-          <div class="receipt-sub">실시간 호흡당 급여 카운터 & 루팡 명세서</div>
-          <div class="receipt-badge" id="lupangGrade">LEVEL. 프로 월급루팡</div>
-        </div>
+      <!-- Key Unit Rates -->
+      <div class="rate-chips-row">
+        <div class="rate-chip">1초: <span id="v-sec">3.99원</span></div>
+        <div class="rate-chip">숨(4초): <span id="v-breath">15.95원</span></div>
+        <div class="rate-chip">1분: <span id="v-min">239.23원</span></div>
+      </div>
+    </section>
 
-        <!-- Real-time Live Ticker Box -->
-        <div class="live-counter-box">
-          <div class="live-badge">
-            <span class="live-pulse"></span>
-            <span id="tickerStatusText">실시간 급여 카운트 중</span>
-          </div>
-          <div class="live-amount" id="tickDisplay">
-            <span id="tick-i">0</span><span style="font-size: 1.15rem; opacity: 0.8;" id="tick-f">.00원</span>
-          </div>
-          <div class="live-amount-sub" id="tick-sub">1초에 3.99원씩 불어나는 중</div>
-          <div class="live-stats-row">
-            <span id="statTime">⏱️ 00:00:00</span>
-            <span>·</span>
-            <span id="statBreaths">💨 숨 0회</span>
-          </div>
-        </div>
+    <!-- 3. Simple Controls -->
+    <div class="controls-grid">
+      <button class="ctl-btn ctl-btn-play" id="btn-start" type="button">
+        <span>▶</span>
+        <span id="btnStartText">카운트 시작</span>
+      </button>
+      <button class="ctl-btn ctl-btn-reset" id="btn-reset" type="button">
+        <span>🔄</span>
+        <span>처음부터</span>
+      </button>
+    </div>
 
-        <!-- Timer Controls -->
-        <div class="controls-row">
-          <button class="control-btn btn-start-run" id="btn-start" type="button">
-            <span>▶</span>
-            <span id="btnStartText">카운트 시작</span>
-          </button>
-          <button class="control-btn btn-reset-run" id="btn-reset" type="button">
-            <span>🔄</span>
-            <span>처음부터</span>
-          </button>
-        </div>
+    <!-- Quick Attendance Button -->
+    <button class="attendance-toggle-btn" id="btnAttendance" type="button" onclick="setMorningAttendance()">
+      <span>⏰</span>
+      <span id="attBtnText">오늘 오전 09:00 출근 기준 누적 계산하기</span>
+    </button>
 
-        <!-- Attendance Since Box -->
-        <div class="since-box">
-          <div class="since-label">⏰ 오늘 이미 출근하셨나요? 출근 시각 설정</div>
-          <div class="since-input-row">
-            <input class="since-input" id="since" type="time" value="09:00">
-            <button class="btn-since-apply" id="btn-since" type="button">이 시각부터 누적</button>
-          </div>
-          <p class="hint-text" id="tick-msg" style="margin-top: 4px; color: var(--primary); font-weight: 600;"></p>
-        </div>
-
-        <!-- Viral Lupang Activity Tracker -->
-        <div class="lupang-box">
-          <div class="lupang-header">
-            <span>🔥</span>
-            <span>오늘의 루팡 액티비티 성과</span>
-          </div>
-          <div class="lupang-grid">
-            <div class="lupang-card">
-              <span class="lupang-icon">💩</span>
-              <div class="lupang-card-title">화장실 (10분)</div>
-              <div class="lupang-card-val" id="actToilet">2,392원</div>
-            </div>
-            <div class="lupang-card">
-              <span class="lupang-icon">☕</span>
-              <div class="lupang-card-title">커피 타임 (15분)</div>
-              <div class="lupang-card-val" id="actCoffee">3,588원</div>
-            </div>
-            <div class="lupang-card">
-              <span class="lupang-icon">🗣️</span>
-              <div class="lupang-card-title">딴생각 회의 (1시간)</div>
-              <div class="lupang-card-val" id="actMeeting">14,354원</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Breakdown Table -->
-        <table class="breakdown-table">
-          <tr class="highlight"><th scope="row">1초당 급여</th><td id="v-sec">3.99원</td></tr>
-          <tr class="highlight"><th scope="row">숨 한 번 (4초)</th><td id="v-breath">15.95원</td></tr>
-          <tr><th scope="row">1분</th><td id="v-min">239.23원</td></tr>
-          <tr><th scope="row">1시간 (시급)</th><td id="v-hour">14,354원</td></tr>
-          <tr><th scope="row">하루 8시간</th><td id="v-day">114,833원</td></tr>
-          <tr><th scope="row">한 달</th><td id="v-month">3,000,000원</td></tr>
-          <tr><th scope="row">1년</th><td id="v-year">36,000,000원</td></tr>
-        </table>
-
-        <!-- Barcode Graphic -->
-        <div class="barcode-wrap">
-          <svg class="barcode-svg" fill="currentColor" viewBox="0 0 190 34">
-            <rect height="34" width="4" x="0" y="0"></rect>
-            <rect height="34" width="2" x="6" y="0"></rect>
-            <rect height="34" width="6" x="10" y="0"></rect>
-            <rect height="34" width="2" x="18" y="0"></rect>
-            <rect height="34" width="4" x="22" y="0"></rect>
-            <rect height="34" width="8" x="28" y="0"></rect>
-            <rect height="34" width="2" x="38" y="0"></rect>
-            <rect height="34" width="4" x="42" y="0"></rect>
-            <rect height="34" width="6" x="48" y="0"></rect>
-            <rect height="34" width="2" x="56" y="0"></rect>
-            <rect height="34" width="8" x="60" y="0"></rect>
-            <rect height="34" width="4" x="70" y="0"></rect>
-            <rect height="34" width="2" x="76" y="0"></rect>
-            <rect height="34" width="6" x="80" y="0"></rect>
-            <rect height="34" width="4" x="88" y="0"></rect>
-            <rect height="34" width="8" x="94" y="0"></rect>
-            <rect height="34" width="2" x="104" y="0"></rect>
-            <rect height="34" width="6" x="108" y="0"></rect>
-            <rect height="34" width="4" x="116" y="0"></rect>
-            <rect height="34" width="2" x="122" y="0"></rect>
-            <rect height="34" width="8" x="126" y="0"></rect>
-            <rect height="34" width="4" x="136" y="0"></rect>
-            <rect height="34" width="2" x="142" y="0"></rect>
-            <rect height="34" width="6" x="146" y="0"></rect>
-            <rect height="34" width="4" x="154" y="0"></rect>
-            <rect height="34" width="8" x="160" y="0"></rect>
-            <rect height="34" width="2" x="170" y="0"></rect>
-            <rect height="34" width="4" x="174" y="0"></rect>
-            <rect height="34" width="6" x="180" y="0"></rect>
-            <rect height="34" width="2" x="188" y="0"></rect>
-          </svg>
-          <div class="barcode-text">TIME IS MONEY · BREATHE TO EARN</div>
-        </div>
-
-        <!-- SMART 2-TIER ACTION TOOLBAR (Strict User Standard) -->
-        <div class="action-toolbar">
-          <div class="toolbar-row">
-            <button class="toolbar-btn primary" id="btnDownloadPng" onclick="downloadLupangReceiptPNG()" type="button">
-              <span>📥</span>
-              <span>루팡 명세서 PNG 저장</span>
-            </button>
-          </div>
-          <div class="toolbar-row">
-            <button class="toolbar-btn secondary" id="btn-copy" onclick="copyLupangSummary()" type="button">
-              <span>📋</span>
-              <span>루팡 요약 복사</span>
-            </button>
-            <button class="toolbar-btn outline" id="btn-share" onclick="shareLupangResult()" type="button">
-              <span>🔗</span>
-              <span>결과 공유</span>
-            </button>
-          </div>
-        </div>
-      </section>
+    <!-- SMART 2-TIER ACTION TOOLBAR (Strict User Standard) -->
+    <div class="action-toolbar">
+      <div class="toolbar-row">
+        <button class="toolbar-btn primary" id="btnDownloadPng" onclick="downloadLupangReceiptPNG()" type="button">
+          <span>📥</span>
+          <span>루팡 명세서 PNG 저장</span>
+        </button>
+      </div>
+      <div class="toolbar-row">
+        <button class="toolbar-btn secondary" id="btn-copy" onclick="copyLupangSummary()" type="button">
+          <span>📋</span>
+          <span>루팡 요약 복사</span>
+        </button>
+        <button class="toolbar-btn outline" id="btn-share" onclick="shareLupangResult()" type="button">
+          <span>🔗</span>
+          <span>결과 공유</span>
+        </button>
+      </div>
     </div>
 
     <!-- Mid AdSense Banner (Slot 1186914926) -->
     <!-- ADSENSE START: mid -->
-    <div class="ad-box ad-mid" style="max-width:1080px;margin:20px auto;text-align:center;">
+    <div class="ad-box ad-mid" style="max-width:640px;margin:20px auto;text-align:center;">
       <ins class="adsbygoogle"
            style="display:block"
            data-ad-client="ca-pub-2228289204702106"
@@ -1242,7 +813,7 @@
     </div>
     <!-- ADSENSE END: mid -->
 
-    <!-- Related Workplace Utilities Cluster -->
+    <!-- Related Workplace Utilities -->
     <section class="utilities-section">
       <h2 class="utilities-title">
         <span>💼</span>
@@ -1250,117 +821,51 @@
       </h2>
       <div class="utilities-grid">
         <a class="utility-card" href="https://calc-half-leave.enjoy-onepage.com/" target="_blank" rel="noopener">
-          <div>
-            <div class="utility-tag">연차 영끌</div>
-            <div class="utility-name">반반차·연차 시간 계산기</div>
-          </div>
+          <span class="utility-name">반반차·연차 시간 계산기</span>
           <span class="utility-arrow">→</span>
         </a>
         <a class="utility-card" href="https://overtime.enjoy-onepage.com/" target="_blank" rel="noopener">
-          <div>
-            <div class="utility-tag">수당 정산</div>
-            <div class="utility-name">야근·휴일수당 계산기</div>
-          </div>
+          <span class="utility-name">야근·휴일수당 계산기</span>
           <span class="utility-arrow">→</span>
         </a>
         <a class="utility-card" href="https://severance.enjoy-onepage.com/" target="_blank" rel="noopener">
-          <div>
-            <div class="utility-tag">퇴사 준비</div>
-            <div class="utility-name">퇴직금 정밀 계산기</div>
-          </div>
+          <span class="utility-name">퇴직금 정밀 계산기</span>
           <span class="utility-arrow">→</span>
         </a>
         <a class="utility-card" href="https://unemployed.enjoy-onepage.com/" target="_blank" rel="noopener">
-          <div>
-            <div class="utility-tag">실직 대비</div>
-            <div class="utility-name">실업급여 예상 모의계산기</div>
-          </div>
-          <span class="utility-arrow">→</span>
-        </a>
-        <a class="utility-card" href="https://freelance-rate-calc.enjoy-onepage.com/" target="_blank" rel="noopener">
-          <div>
-            <div class="utility-tag">N잡·외주</div>
-            <div class="utility-name">프리랜서 외주단가 역산기</div>
-          </div>
-          <span class="utility-arrow">→</span>
-        </a>
-        <a class="utility-card" href="https://enjoy-onepage.com/" target="_blank" rel="noopener">
-          <div>
-            <div class="utility-tag">전체 도구</div>
-            <div class="utility-name">원페이지 생활도구 허브</div>
-          </div>
+          <span class="utility-name">실업급여 예상 모의계산기</span>
           <span class="utility-arrow">→</span>
         </a>
       </div>
     </section>
 
-    <!-- How it works educational section -->
-    <section class="info-section" id="how-it-works">
-      <h2 class="info-title">🧮 계산 원리 및 산출 기준</h2>
-      <ul class="info-list">
-        <li><strong>시급 산정:</strong> 월급을 한 달 유급 근로시간(기본 209시간)으로 나눕니다. 연봉은 12개월로 나눈 뒤 동일하게 계산합니다.</li>
-        <li><strong>1초 및 호흡당 금액:</strong> 시급을 3,600초로 나누어 1초 금액을 구하며, 숨 한 번은 의학적 평균 호흡 주기인 4초(분당 15회)를 곱해 산출합니다.</li>
-        <li><strong>실시간 카운터 동기화:</strong> 기기 내부 고정밀 시계(`Date.now()`)를 기반으로 경과 시간을 측정하므로, 브라우저 탭을 전환하거나 화면이 잠겨도 오차 없이 정확하게 누적됩니다.</li>
-        <li><strong>세전 기준 안내:</strong> 화면에 표시되는 모든 금액은 4대 보험 및 근로소득세를 공제하기 전인 세전 급여 기준입니다.</li>
-      </ul>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="info-section" id="faq">
-      <h2 class="info-title">❓ 자주 묻는 질문 (FAQ)</h2>
+    <!-- FAQ Accordion -->
+    <section class="faq-section" id="faq">
+      <h2 class="faq-title">자주 묻는 질문 (FAQ)</h2>
       <div class="faq-list">
         <details class="faq-item">
           <summary class="faq-question">
             <span>1초에 얼마를 버는지 어떻게 계산하나요?</span>
-            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            <span>▾</span>
           </summary>
           <p class="faq-answer">
-            시급을 1시간의 초 수인 3,600으로 나눕니다. 월급이면 먼저 한 달 유급 시간(기본 209시간)으로 나눠 시급을 구합니다. 예를 들어 세전 월급 300만 원은 시급 약 14,354원, 1초에 약 3.99원, 숨 한 번(4초)에 약 15.95원입니다.
-          </p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">
-            <span>209시간은 어디서 나온 숫자인가요?</span>
-            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-          </summary>
-          <p class="faq-answer">
-            주 40시간 일하고 주휴 8시간을 받는 경우를 한 달로 나눈 값입니다. 1주 48시간 × 365일 ÷ 7일 ÷ 12개월 ≈ 208.6시간을 올림했습니다. 근무 시간이 다르거나 주휴가 없으면 한 달 유급 시간을 바꿔 넣으세요.
+            월급을 209시간(주 40시간+주휴 8시간 기준)으로 나누어 시급을 구한 뒤, 이를 3,600초로 나누어 산출합니다.
           </p>
         </details>
         <details class="faq-item">
           <summary class="faq-question">
             <span>세금을 뗀 금액인가요?</span>
-            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+            <span>▾</span>
           </summary>
           <p class="faq-answer">
-            아니요, 세전 금액입니다. 입력한 급여에서 세금과 4대 보험료를 빼기 전 금액으로 계산하므로 실제로 통장에 들어오는 돈은 이보다 적습니다.
-          </p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">
-            <span>쉬는 시간이나 이미 시작한 근무도 셀 수 있나요?</span>
-            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-          </summary>
-          <p class="faq-answer">
-            쉬는 시간에는 잠깐 멈춤을 누르고, 돌아오면 이어서를 누르세요. 시작을 누르지 못했다면 출근한 시각을 넣고 '이 시각부터 세기'를 누르면 그 시각부터 셉니다. 급여를 바꾸면 이미 쌓인 금액은 그대로 두고 그때부터 새 금액으로 셉니다.
-          </p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">
-            <span>급여가 저장되거나 어디로 보내지나요?</span>
-            <svg class="faq-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-          </summary>
-          <p class="faq-answer">
-            아니요. 계산은 이 브라우저 안에서만 하고 아무것도 저장하지 않아, 페이지를 닫으면 사라집니다. 결과 복사나 공유하기를 누를 때만 급여가 링크 주소에 들어가며, 그 링크를 연 사람은 같은 결과를 봅니다.
+            아닙니다. 4대 보험과 소득세를 공제하기 전인 세전 급여 기준 추정 금액입니다.
           </p>
         </details>
       </div>
     </section>
 
-    <!-- Notice / Disclaimer -->
     <div class="disclaimer-box">
-      ⚠️ 본 카운터는 입력하신 급여 정보를 바탕으로 한 재미 및 참고용 추정 계산기입니다.<br>
-      실제 지급되는 급여는 사내 취업규칙, 근태 기록, 세액 공제 등에 따라 상이할 수 있습니다.
+      ⚠️ 본 카운터는 입력하신 급여 정보를 바탕으로 한 재미 및 참고용 추정 계산기입니다.
     </div>
   </main>
 
@@ -1376,26 +881,22 @@
   </div>
   <!-- ADSENSE END: bottom -->
 
-  <!-- Global Footer -->
+  <!-- Footer -->
   <footer class="site-footer">
-    <div class="footer-inner">
-      <div class="footer-nav">
-        <a href="/privacy.html">개인정보처리방침</a>
-        <a href="/terms.html">이용약관</a>
-      </div>
-      <div>
-        © 2026 호흡당 급여 카운터 · 직장인을 위한 무료 웹 유틸리티. All rights reserved.
-      </div>
+    <div class="footer-nav">
+      <a href="/privacy.html">개인정보처리방침</a>
+      <span>·</span>
+      <a href="/terms.html">이용약관</a>
     </div>
+    <div>© 2026 호흡당 급여 카운터. All rights reserved.</div>
   </footer>
 
-  <!-- Toast Notification Element -->
+  <!-- Toast Element -->
   <div class="toast" id="globalToast" role="status" aria-live="polite"></div>
 
-  <!-- Hidden Canvas for PNG Generation -->
+  <!-- Hidden Canvas for PNG -->
   <canvas id="receiptCanvas" style="display: none;"></canvas>
 
-  <!-- JavaScript Logic -->
   <script>
     (function() {
       'use strict';
@@ -1409,7 +910,6 @@
       function num(id) { var v = val(id); if (v === '') return null; var n = Number(v); return isFinite(n) ? n : NaN; }
       function setText(id, text) { var el = $(id); if (el) el.textContent = text; }
 
-      /* Formatting helpers */
       function won(v, dp) {
         if (!Number.isFinite(v)) return '0원';
         return v.toLocaleString('ko-KR', { minimumFractionDigits: dp, maximumFractionDigits: dp }) + '원';
@@ -1423,37 +923,15 @@
         var s = Math.floor(ms / 1000);
         return pad2(Math.floor(s / 3600)) + ':' + pad2(Math.floor(s % 3600 / 60)) + ':' + pad2(s % 60);
       }
-      function dur(s) {
-        if (!(s >= 1)) return '1초 미만';
-        s = Math.round(s);
-        var h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), r = s % 60, out = [];
-        if (h) out.push(h.toLocaleString('ko-KR') + '시간');
-        if (m) out.push(m + '분');
-        if (r && !h) out.push(r + '초');
-        return out.join(' ');
-      }
 
-      /* Core Pay Calculation */
       function monthlyOf(x) {
         if (x.per === 'month') return x.pay;
         if (x.per === 'year') return x.pay / 12;
-        return x.pay * x.mh;
+        return x.pay * 209;
       }
       function hourlyOf(x) {
         if (x.per === 'hour') return x.pay;
-        return monthlyOf(x) / x.mh;
-      }
-      function getBreakdown(x) {
-        var hr = hourlyOf(x), M = monthlyOf(x);
-        return {
-          sec: hr / 3600,
-          breath: (hr / 3600) * BREATH_SEC,
-          min: hr / 60,
-          hour: hr,
-          day: hr * 8,
-          month: M,
-          year: M * 12
-        };
+        return monthlyOf(x) / 209;
       }
 
       var cur = null;
@@ -1468,11 +946,10 @@
         var fracPart = (e % 1).toFixed(2).substring(1);
 
         setText('tick-i', intPart.toLocaleString('ko-KR'));
-        setText('tick-f', fracPart + '원');
+        setText('tick-f', fracPart);
         setText('statTime', '⏱️ ' + hms(ms));
         setText('statBreaths', '💨 숨 ' + Math.floor(ms / 1000 / BREATH_SEC).toLocaleString('ko-KR') + '회');
 
-        // Page title dynamic reflection
         if (T.running) {
           document.title = '₩' + intPart.toLocaleString('ko-KR') + ' · ' + TOOL_NAME;
         } else {
@@ -1486,15 +963,6 @@
         T.bank += d / 1000 * T.rate;
         T.bankMs += d;
         T.since = n;
-      }
-
-      function updateLupangGrade(monthly) {
-        var grade = 'LEVEL. 아기 월급루팡';
-        if (monthly >= 6000000) grade = 'LEVEL. 마스터 월급루팡 👑';
-        else if (monthly >= 4000000) grade = 'LEVEL. 수석 월급루팡 ⭐';
-        else if (monthly >= 3000000) grade = 'LEVEL. 프로 월급루팡';
-        else if (monthly >= 2000000) grade = 'LEVEL. 주니어 월급루팡';
-        setText('lupangGrade', grade);
       }
 
       function syncUI() {
@@ -1511,71 +979,44 @@
         }
 
         if (cur) {
-          var rateText = '1초에 ' + won(cur.b.sec, 2) + '씩 불어나는 중';
-          setText('tick-sub', rateText);
-
-          // Update breakdown table
-          setText('v-sec', won(cur.b.sec, 2));
-          setText('v-breath', won(cur.b.breath, 2));
-          setText('v-min', won(cur.b.min, 2));
-          setText('v-hour', won(cur.b.hour, 0));
-          setText('v-day', won(cur.b.day, 0));
-          setText('v-month', won(cur.b.month, 0));
-          setText('v-year', won(cur.b.year, 0));
-
-          // Lupang Activities
-          setText('actToilet', won(cur.b.min * 10, 0));
-          setText('actCoffee', won(cur.b.min * 15, 0));
-          setText('actMeeting', won(cur.b.hour, 0));
-
-          updateLupangGrade(cur.b.month);
+          setText('v-sec', won(cur.sec, 2));
+          setText('v-breath', won(cur.breath, 2));
+          setText('v-min', won(cur.min, 2));
         }
-      }
-
-      function readInputs() {
-        var per = val('per') || 'month';
-        var p = num('pay');
-        var mh = num('mh') || 209;
-        return { pay: p, per: per, mh: mh };
       }
 
       function calculate() {
-        var x = readInputs();
-        var errEl = $('err');
-        if (x.pay === null || isNaN(x.pay) || x.pay <= 0) {
-          if (errEl) { errEl.textContent = '세전 급여를 0원보다 큰 숫자로 입력해 주세요.'; errEl.style.display = 'block'; }
-          return;
-        }
-        if (errEl) { errEl.style.display = 'none'; }
+        var p = num('pay');
+        var per = val('per') || 'month';
+        if (p === null || isNaN(p) || p <= 0) return;
 
-        var b = getBreakdown(x);
+        var hr = hourlyOf({ pay: p, per: per });
+        var secRate = hr / 3600;
+
+        cur = {
+          pay: p,
+          per: per,
+          hour: hr,
+          sec: secRate,
+          breath: secRate * BREATH_SEC,
+          min: hr / 60,
+          day: hr * 8,
+          month: monthlyOf({ pay: p, per: per })
+        };
+
         if (T.running) {
           bankNow();
-          T.rate = b.sec;
+          T.rate = secRate;
         }
-        cur = { x: x, b: b };
         syncUI();
         paint();
-        renderItem();
-      }
-
-      function renderItem() {
-        var v = val('item');
-        var msgEl = $('item-msg');
-        if (!msgEl) return;
-        if (!v) { msgEl.textContent = ''; return; }
-        if (!cur) { msgEl.textContent = '급여를 먼저 입력해 주세요.'; return; }
-        var p = Number(v);
-        if (!isFinite(p) || p <= 0) { msgEl.textContent = '금액을 0원보다 크게 입력해 주세요.'; return; }
-        var s = p / cur.b.sec;
-        msgEl.textContent = s < 1 ? won(p, 0) + '은 1초 안에 법니다! ✨' : won(p, 0) + '을 벌려면 약 ' + dur(s) + ' 일해야 합니다.';
       }
 
       function run(fromMs) {
         if (!cur) return;
         T.running = true;
         T.since = fromMs;
-        T.rate = cur.b.sec;
+        T.rate = cur.sec;
         clearInterval(T.timer);
         T.timer = setInterval(paint, 100);
         paint();
@@ -1598,24 +1039,26 @@
         T.bank = 0;
         T.bankMs = 0;
         T.since = 0;
-        setText('tick-msg', '');
         paint();
         syncUI();
       }
 
-      /* Quick presets helper */
       window.setPresetPay = function(amount, perType) {
-        if (perType) {
-          var perEl = $('per');
-          if (perEl) perEl.value = perType;
-        }
-        var payEl = $('pay');
-        if (payEl) payEl.value = amount;
+        if (perType) $('per').value = perType;
+        $('pay').value = amount;
         calculate();
         showToast('급여가 ' + fmtN(amount) + '원으로 설정되었습니다.');
       };
 
-      /* Toast Notification */
+      window.setMorningAttendance = function() {
+        if (!cur) calculate();
+        var now = new Date();
+        var att = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 9, 0, 0);
+        reset();
+        run(att.getTime());
+        showToast('오늘 오전 09:00 출근 기준으로 누적 카운트 중입니다!');
+      };
+
       var toastTimeout = null;
       function showToast(msg) {
         var toast = $('globalToast');
@@ -1625,20 +1068,17 @@
         clearTimeout(toastTimeout);
         toastTimeout = setTimeout(function() {
           toast.classList.remove('show');
-        }, 2200);
+        }, 2000);
       }
 
-      /* Copy & Share */
       function getSummaryText() {
         if (!cur) return '';
-        var b = cur.b, x = cur.x, n = Date.now(), ms = onClock(n), e = earned(n);
+        var n = Date.now(), ms = onClock(n), e = earned(n);
         var lines = [
           '⏱️ [호흡당 급여 카운터 : 월급루팡 명세서]',
-          '• 세전 급여: ' + fmtN(x.pay) + '원 (' + (x.per === 'year' ? '연봉' : (x.per === 'hour' ? '시급' : '월급')) + ')',
-          '• 1초당: ' + won(b.sec, 2) + ' / 숨 한 번(4초): ' + won(b.breath, 2),
-          '• 1시간(시급): ' + won(b.hour, 0) + ' / 하루(8시간): ' + won(b.day, 0),
-          '• 💩 화장실 10분 루팡: ' + won(b.min * 10, 0),
-          '• ☕ 커피 15분 루팡: ' + won(b.min * 15, 0)
+          '• 세전 급여: ' + fmtN(cur.pay) + '원 (' + (cur.per === 'year' ? '연봉' : (cur.per === 'hour' ? '시급' : '월급')) + ')',
+          '• 1초당: ' + won(cur.sec, 2) + ' / 숨 한 번(4초): ' + won(cur.breath, 2),
+          '• 1분당: ' + won(cur.min, 2) + ' / 1시간(시급): ' + won(cur.hour, 0)
         ];
         if (T.running || T.bankMs > 0) {
           lines.push('• 🚀 오늘 근무: ' + hms(ms) + ' 동안 ' + won(e, 2) + ' 획득!');
@@ -1664,7 +1104,7 @@
         var text = getSummaryText();
         if (navigator.share) {
           navigator.share({
-            title: '호흡당 급여 카운터 · 월급루팡 명세서',
+            title: '호흡당 급여 카운터',
             text: text,
             url: SITE
           }).catch(function(e) {
@@ -1675,7 +1115,6 @@
         }
       };
 
-      /* High-Retina 2x Canvas PNG Lupang Receipt Generator */
       window.downloadLupangReceiptPNG = function() {
         if (!cur) {
           showToast('급여 정보를 먼저 입력해 주세요.');
@@ -1684,8 +1123,8 @@
         var canvas = $('receiptCanvas');
         var ctx = canvas.getContext('2d');
         var scale = 2;
-        var w = 400 * scale;
-        var h = 580 * scale;
+        var w = 380 * scale;
+        var h = 480 * scale;
 
         canvas.width = w;
         canvas.height = h;
@@ -1696,51 +1135,44 @@
 
         // Header Border & Punch Hole
         ctx.fillStyle = '#0f766e';
-        ctx.fillRect(0, 0, w, 16 * scale);
+        ctx.fillRect(0, 0, w, 14 * scale);
 
         ctx.fillStyle = '#f8fafc';
         ctx.beginPath();
-        ctx.arc(w / 2, 0, 14 * scale, 0, Math.PI * 2);
+        ctx.arc(w / 2, 0, 12 * scale, 0, Math.PI * 2);
         ctx.fill();
 
-        // Receipt Content
+        // Title
         ctx.fillStyle = '#0f172a';
         ctx.font = 'bold ' + (18 * scale) + 'px -apple-system, sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText('OFFICE LUPANG PAYSLIP', w / 2, 48 * scale);
+        ctx.fillText('OFFICE LUPANG PAYSLIP', w / 2, 44 * scale);
 
         ctx.fillStyle = '#64748b';
         ctx.font = 'normal ' + (10 * scale) + 'px -apple-system, sans-serif';
-        ctx.fillText('공식 월급루팡 실시간 급여 명세서', w / 2, 65 * scale);
-
-        // Badge
-        ctx.fillStyle = '#ccfbf1';
-        ctx.fillRect(w / 2 - 70 * scale, 75 * scale, 140 * scale, 18 * scale);
-        ctx.fillStyle = '#0f766e';
-        ctx.font = 'bold ' + (9 * scale) + 'px -apple-system, sans-serif';
-        ctx.fillText($('lupangGrade').textContent || 'LEVEL. 프로 월급루팡', w / 2, 88 * scale);
+        ctx.fillText('공식 월급루팡 실시간 급여 명세서', w / 2, 60 * scale);
 
         // Dashed Divider
         ctx.strokeStyle = '#cbd5e1';
         ctx.lineWidth = 1.5 * scale;
         ctx.setLineDash([4 * scale, 4 * scale]);
         ctx.beginPath();
-        ctx.moveTo(24 * scale, 106 * scale);
-        ctx.lineTo(w - 24 * scale, 106 * scale);
+        ctx.moveTo(24 * scale, 80 * scale);
+        ctx.lineTo(w - 24 * scale, 80 * scale);
         ctx.stroke();
         ctx.setLineDash([]);
 
         // Table Rows
         var rows = [
-          ['세전 급여', fmtN(cur.x.pay) + '원 (' + (cur.x.per === 'year' ? '연봉' : (cur.x.per === 'hour' ? '시급' : '월급')) + ')'],
-          ['시급 환산 (209h)', won(cur.b.hour, 0)],
-          ['1초당 급여', won(cur.b.sec, 2)],
-          ['숨 한 번 (4초)', won(cur.b.breath, 2)],
-          ['1분당 급여', won(cur.b.min, 2)],
-          ['하루 8시간', won(cur.b.day, 0)]
+          ['세전 급여', fmtN(cur.pay) + '원 (' + (cur.per === 'year' ? '연봉' : (cur.per === 'hour' ? '시급' : '월급')) + ')'],
+          ['시급 환산 (209h)', won(cur.hour, 0)],
+          ['1초당 급여', won(cur.sec, 2)],
+          ['숨 한 번 (4초)', won(cur.breath, 2)],
+          ['1분당 급여', won(cur.min, 2)],
+          ['하루 8시간', won(cur.day, 0)]
         ];
 
-        var y = 130 * scale;
+        var y = 106 * scale;
         ctx.font = 'normal ' + (11 * scale) + 'px -apple-system, sans-serif';
         rows.forEach(function(r) {
           ctx.textAlign = 'left';
@@ -1756,33 +1188,8 @@
           y += 24 * scale;
         });
 
-        // Lupang Perks Box
-        y += 6 * scale;
-        ctx.fillStyle = '#f0fdfa';
-        ctx.fillRect(24 * scale, y, w - 48 * scale, 84 * scale);
-        ctx.strokeStyle = '#99f6e4';
-        ctx.strokeRect(24 * scale, y, w - 48 * scale, 84 * scale);
-
-        ctx.fillStyle = '#0f766e';
-        ctx.font = 'bold ' + (10 * scale) + 'px -apple-system, sans-serif';
-        ctx.textAlign = 'left';
-        ctx.fillText('🔥 루팡 액티비티 획득 단가', 34 * scale, y + 20 * scale);
-
-        ctx.font = 'normal ' + (10 * scale) + 'px -apple-system, sans-serif';
-        ctx.fillStyle = '#334155';
-        ctx.fillText('• 💩 화장실 10분 루팡:', 34 * scale, y + 38 * scale);
-        ctx.fillText('• ☕ 커피 & 멍때리기 15분:', 34 * scale, y + 54 * scale);
-        ctx.fillText('• 🗣️ 딴생각 회의 1시간:', 34 * scale, y + 70 * scale);
-
-        ctx.textAlign = 'right';
-        ctx.fillStyle = '#0f766e';
-        ctx.font = 'bold ' + (10 * scale) + 'px -apple-system, sans-serif';
-        ctx.fillText(won(cur.b.min * 10, 0), w - 34 * scale, y + 38 * scale);
-        ctx.fillText(won(cur.b.min * 15, 0), w - 34 * scale, y + 54 * scale);
-        ctx.fillText(won(cur.b.hour, 0), w - 34 * scale, y + 70 * scale);
-
-        // Highlight Box: Earned Today
-        y += 98 * scale;
+        // Highlight Box: Earned
+        y += 8 * scale;
         var n = Date.now(), ms = onClock(n), e = earned(n);
         ctx.fillStyle = '#0f766e';
         ctx.fillRect(24 * scale, y, w - 48 * scale, 68 * scale);
@@ -1800,15 +1207,14 @@
         ctx.font = 'normal ' + (9 * scale) + 'px -apple-system, sans-serif';
         ctx.fillText('총 ' + Math.floor(ms / 1000 / BREATH_SEC).toLocaleString('ko-KR') + '번 숨 쉬며 획득', w / 2, y + 60 * scale);
 
-        // Bottom Barcode & Footer
-        y += 84 * scale;
+        // Footer Barcode
+        y += 88 * scale;
         ctx.fillStyle = '#94a3b8';
         ctx.font = 'normal ' + (8 * scale) + 'px monospace';
         ctx.textAlign = 'center';
         ctx.fillText('|| | |||| || ||| |||| || | || |||| || |||', w / 2, y);
         ctx.fillText('breath-to-wage-counter.enjoy-onepage.com', w / 2, y + 14 * scale);
 
-        // Download trigger
         var link = document.createElement('a');
         link.download = '월급루팡_급여명세서_' + new Date().toISOString().slice(0, 10) + '.png';
         link.href = canvas.toDataURL('image/png');
@@ -1816,16 +1222,9 @@
         showToast('루팡 명세서 PNG가 저장되었습니다! 📥');
       };
 
-      /* Event Bindings */
+      // Events
       $('pay').addEventListener('input', calculate);
-      $('mh').addEventListener('input', calculate);
-      $('per').addEventListener('change', function() {
-        var p = $('payLabel');
-        var sel = val('per');
-        if (p) p.textContent = sel === 'year' ? '세전 연봉 (원)' : (sel === 'hour' ? '세전 시급 (원)' : '세전 월급 (원)');
-        calculate();
-      });
-      $('item').addEventListener('input', renderItem);
+      $('per').addEventListener('change', calculate);
 
       $('btn-start').addEventListener('click', function() {
         if (T.running) {
@@ -1838,50 +1237,19 @@
 
       $('btn-reset').addEventListener('click', reset);
 
-      $('btn-since').addEventListener('click', function() {
-        if (!cur) calculate();
-        if (!cur) return;
-        var sVal = val('since');
-        var m = /^(\d{1,2}):(\d{2})/.exec(sVal);
-        if (!m || +m[1] > 23 || +m[2] > 59) {
-          setText('tick-msg', '올바른 시각을 선택해 주세요.');
-          return;
-        }
-        var n = Date.now(), d = new Date(n), y = false;
-        d.setHours(+m[1], +m[2], 0, 0);
-        if (d.getTime() > n) {
-          d.setDate(d.getDate() - 1);
-          y = true;
-        }
-        reset();
-        run(d.getTime());
-        var t = d.toLocaleTimeString('ko-KR', { hour: 'numeric', minute: '2-digit' });
-        setText('tick-msg', (y ? '어제 ' : '오늘 ') + t + '부터 자동 누적 계산 중입니다.');
-        showToast(t + '부터 누적 급여 카운트를 시작합니다.');
-      });
-
       document.addEventListener('visibilitychange', function() {
         if (!document.hidden) paint();
       });
 
-      /* Initialization with URL params or default */
+      // Init
       (function init() {
         var q; try { q = new URLSearchParams(location.search); } catch (e) { q = null; }
         if (q) {
           if (q.has('pay')) $('pay').value = q.get('pay');
           if (q.has('per')) $('per').value = q.get('per');
-          if (q.has('mh')) $('mh').value = q.get('mh');
         }
         calculate();
-        // Auto-start timer on load with 09:00 default
-        var now = new Date();
-        var att = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 9, 0, 0);
-        if (now.getHours() >= 9) {
-          run(att.getTime());
-          setText('tick-msg', '오늘 오전 09:00부터 자동 누적 계산 중입니다.');
-        } else {
-          run(now.getTime());
-        }
+        run(Date.now());
       })();
 
     })();
